@@ -1,3 +1,4 @@
+#coding=utf-8
 import unittest
 from case.TestLogin import TestLogin
 from case.TestCd import TestCd

@@ -1,3 +1,4 @@
+#coding=utf-8
 import unittest
 from api.OrderApi import Order
 from api.pymysql_cd import DBUtil

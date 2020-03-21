@@ -1,3 +1,4 @@
+#coding=utf-8
 import unittest
 from api.LoginApi import Login
 import requests
