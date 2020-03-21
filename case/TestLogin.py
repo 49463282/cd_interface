@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 import unittest
 from api.LoginApi import Login
 import requests
@@ -22,4 +22,4 @@ class TestLogin(unittest.TestCase):
         token = response.json().get("data").get("token")
         app.TOKEN = token
         # 断言判断
-        self.assertEqual('成功', response.json().get("message"))
+        self.assertEqual('200', response.json().get("status"))
