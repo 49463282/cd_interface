@@ -15,9 +15,8 @@ class TestCd(unittest.TestCase):
         database = 'cd-user_uat'
         # 调用请求业务
         response = self.order.get_order_list()
-        print(response.text)
         # 断言判断
-        self.assertEqual('200', response.json().get("status"))
+        self.assertEqual(200, response.json().get("status"))
         conn = DBUtil.get_connect(database)
         cursor = DBUtil.get_cursor(conn)
         sql = "select * from t_user where mobile = 18549811213 and type = 0"

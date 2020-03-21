@@ -22,4 +22,4 @@ class TestLogin(unittest.TestCase):
         token = response.json().get("data").get("token")
         app.TOKEN = token
         # 断言判断
-        self.assertEqual('200', response.json().get("status"))
+        self.assertEqual(200, response.json().get("status"))
