@@ -12,16 +12,14 @@ from email.mime.multipart import MIMEMultipart
 import time
 
 suite = unittest.TestSuite()
-case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
+# case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
 # suite = unittest.TestSuite()
-discover = unittest.defaultTestLoader.discover(case_dir,
-                                               pattern="Test*.py",
-                                               top_level_dir=None)
-suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
-# suite.addTest(TestLogin('test_login'))
-# suite.addTest(TestCd('test_order'))
-# suite.addTest(TestLogin('test_login'))
-# suite.addTest(TestCd('test_order'))
+# discover = unittest.defaultTestLoader.discover(case_dir,
+#                                                pattern="Test*.py",
+#                                                top_level_dir=None)
+# suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
+suite.addTest(TestLogin('test_login'))
+suite.addTest(TestCd('test_order'))
 # 创建文件（生成的测试报告）
 
 file = "./report/" + time.strftime("%Y-%m-%d" + "%H_%M_%S" + "_result.html")
