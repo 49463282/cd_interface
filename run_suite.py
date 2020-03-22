@@ -1,5 +1,8 @@
 # coding=utf-8
 import unittest
+
+from case.TestCd import TestCd
+from case.TestLogin import TestLogin
 from tools.HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.header import Header
@@ -22,13 +25,14 @@ from email.mime.multipart import MIMEMultipart
 def all_case():
     # 待执行用例的目录
     # case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
-    case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
+    # case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
     suite = unittest.TestSuite()
-    discover = unittest.defaultTestLoader.discover(case_dir,
-                                                   pattern="Test*.py",
-                                                   top_level_dir=None)
-    suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
-    print(suite)
+    # discover = unittest.defaultTestLoader.discover(case_dir,
+    #                                                pattern="Test*.py",
+    #                                                top_level_dir=None)
+    # suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
+    suite.addTest(TestLogin('test_login'))
+    suite.addTest(TestCd('test_order'))
     return suite
 
 
@@ -79,7 +83,6 @@ def new_report(report):
     lists = os.listdir(report)  # 列出目录的下所有文件和文件夹保存到lists
     lists.sort(key=lambda fn: os.path.getmtime(report + "\\" + fn))  # 按时间排序
     file_new = os.path.join(report, lists[-1])  # 获取最新的文件保存到file_new
-    print(file_new)
     return file_new
 
 
