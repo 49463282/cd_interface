@@ -21,8 +21,8 @@ from email.mime.multipart import MIMEMultipart
 #
 def all_case():
     # 待执行用例的目录
-    case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
-    # case_dir = os.path.join(os.getcwd(), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
+    # case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
+    case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
     suite = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover(case_dir,
                                                    pattern="Test*.py",
