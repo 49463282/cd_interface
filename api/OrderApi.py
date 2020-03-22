@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 import requests
 import json
 import app
@@ -20,5 +20,4 @@ class Order:
         self.data = json.dumps(data)
 
     def get_order_list(self):
-
         return requests.get(self.url, data=self.data, headers=self.heda)

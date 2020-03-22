@@ -3,7 +3,7 @@ import unittest
 from api.LoginApi import Login
 import requests
 import app
-from api.redis_uat import DBRedis
+from tools.redis_uat import DBRedis
 
 
 class TestLogin(unittest.TestCase):
