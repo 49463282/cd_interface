@@ -21,11 +21,11 @@ suite = unittest.TestSuite()
 suite.addTest(TestLogin('test_login'))
 suite.addTest(TestCd('test_order'))
 # 创建文件（生成的测试报告）
-
-file = "./report/" + time.strftime("%Y-%m-%d" + "%H_%M_%S" + "_result.html")
-with open(file, "wb") as f:
-    runner = HTMLTestRunner(f, title="草动接口测试报告", description="自动化测试")
-    runner.run(suite)
+unittest.TextTestRunner().run(suite)
+# file = "./report/" + time.strftime("%Y-%m-%d" + "%H_%M_%S" + "_result.html")
+# with open(file, "wb") as f:
+#     runner = HTMLTestRunner(f, title="草动接口测试报告", description="自动化测试")
+#     runner.run(suite)
 
 # def all_case():
 #     # 待执行用例的目录
