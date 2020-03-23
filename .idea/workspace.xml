@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/login_test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/LoginApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/LoginApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/TestLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestLogin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_suite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1584975902930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1584978508600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestCd_TestCd_test_order.coverage" NAME="Unittests for TestCd.TestCd.test_order Coverage Results" MODIFIED="1584789432516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$LoginApi.coverage" NAME="LoginApi Coverage Results" MODIFIED="1584867129042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestLogin_TestLogin.coverage" NAME="Unittests for TestLogin.TestLogin Coverage Results" MODIFIED="1584970041884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestLogin_TestLogin_test_login.coverage" NAME="Unittests for TestLogin.TestLogin.test_login Coverage Results" MODIFIED="1584978412087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1447420611">
@@ -54,29 +50,29 @@
         <counts>
           <entry key="dummy" value="2" />
           <entry key="json" value="59" />
-          <entry key="py" value="1138" />
-          <entry key="txt" value="22" />
+          <entry key="py" value="1252" />
+          <entry key="txt" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="59" />
-          <entry key="PLAIN_TEXT" value="24" />
-          <entry key="Python" value="1138" />
+          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="Python" value="1252" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/LoginApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="154">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
-                <marker date="1584976002351" expanded="true" signature="2051:2056" ph="..." />
+                <marker date="1584978508556" expanded="true" signature="2067:2073" ph="..." />
               </folding>
             </state>
           </provider>
@@ -85,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/OrderApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="286">
+              <caret line="22" column="61" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="61" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -97,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case/TestCd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="197">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -106,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case/TestLogin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="264">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -124,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_suite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="470">
+              <caret line="90" column="10" lean-forward="true" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -139,20 +135,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/login_test.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="88">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/result_1584974897.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/result_1584974896.csv">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -183,8 +169,8 @@
         <option value="$PROJECT_DIR$/tools/smtplib.py" />
         <option value="$PROJECT_DIR$/data/login_case.json" />
         <option value="$PROJECT_DIR$/data/login_test.csv" />
-        <option value="$PROJECT_DIR$/case/TestLogin.py" />
         <option value="$PROJECT_DIR$/run_suite.py" />
+        <option value="$PROJECT_DIR$/case/TestLogin.py" />
         <option value="$PROJECT_DIR$/api/LoginApi.py" />
       </list>
     </option>
@@ -212,21 +198,6 @@
             <path>
               <item name="cd_interface" type="b2602c69:ProjectViewProjectNode" />
               <item name="cd_interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cd_interface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cd_interface" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cd_interface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cd_interface" type="462c0819:PsiDirectoryNode" />
-              <item name="case" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cd_interface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cd_interface" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,6 +296,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for TestLogin.TestLogin.test_login" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestLogin.TestLogin.test_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for case.TestCd.TestCd.test_order" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -345,10 +331,12 @@
       <item itemvalue="Python tests.Unittests for case.TestCd.TestCd.test_order" />
       <item itemvalue="Python.LoginApi" />
       <item itemvalue="Python tests.Unittests for TestLogin.TestLogin" />
+      <item itemvalue="Python tests.Unittests for TestLogin.TestLogin.test_login" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_suite" />
+        <item itemvalue="Python tests.Unittests for TestLogin.TestLogin.test_login" />
         <item itemvalue="Python tests.Unittests for TestLogin.TestLogin" />
         <item itemvalue="Python.LoginApi" />
         <item itemvalue="Python tests.Unittests for case.TestCd.TestCd.test_order" />
@@ -401,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584842312136</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="数据驱动">
+      <created>1584976142551</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584976142551</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -413,6 +408,9 @@
     </history-entry>
     <history-entry file="Unittests_for_TestLogin_TestLogin - 2020.03.23 at 21h 27m 24s.xml">
       <configuration name="Unittests for TestLogin.TestLogin" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_TestLogin_TestLogin_test_login - 2020.03.23 at 23h 46m 52s.xml">
+      <configuration name="Unittests for TestLogin.TestLogin.test_login" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView" selected-index="4">
@@ -426,7 +424,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="0" width="1400" height="776" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26080477" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -460,7 +457,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="加入代码" />
     <MESSAGE value="添加自动发送测试报告" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加自动发送测试报告" />
+    <MESSAGE value="数据驱动" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据驱动" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/api/__init__.py">
@@ -494,33 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case/TestCd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/OrderApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case/TestLogin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/result_1584974658.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -536,30 +507,57 @@
     <entry file="file://$PROJECT_DIR$/data/result_1584974875.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_suite.py">
+    <entry file="file://$PROJECT_DIR$/case/TestCd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="197">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/login_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/OrderApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="61" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/login_test.csv">
+    <entry file="file://$PROJECT_DIR$/case/TestLogin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="264">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/LoginApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="154">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
-            <marker date="1584976002351" expanded="true" signature="2051:2056" ph="..." />
+            <marker date="1584978508556" expanded="true" signature="2067:2073" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="90" column="10" lean-forward="true" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

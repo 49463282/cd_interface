@@ -50,30 +50,30 @@ class Login:
         :param results: [{data1},{data2},...] 写入的内容
         :return: 无
         '''
-        print("写文件:", self.data_file)
         # 以DictWriter的方式写文件
-        with open(self.data_file, 'w+') as csvfile:
-            headers = "tenantId	,mobile,password,uuid,brandType,type,expect,result".split(
+        with open(filename, 'w+') as csvfile:
+            headers = "tenantId,mobile,password,uuid,code,brandType,type,expect,real_value,assert_value".split(
                 ",")
-        writer = csv.DictWriter(csvfile, fieldnames=headers)
-        # 写表头
-        writer.writeheader()
-        # 写数据
-        if results.__len__() > 0:
-            for result in results:
-                writer.writerow(result)
-        csvfile.close()
+            writer = csv.DictWriter(csvfile, fieldnames=headers)
+            # 写表头
+            writer.writeheader()
+            # 写数据
+            if results.__len__() > 0:
+                for result in results:
+                    writer.writerow(result)
+                    csvfile.close()
 
     def get_login(self, code):
         # data_file = "..\data\login_test.csv"
+        data_file = "C:\\Users\\hp\\PycharmProjects\\cd_interface\\data\\login_test.csv"
         # 指定最终结果生成的数据文件名称
         result_file = "C:\\Users\\hp\\PycharmProjects\\cd_interface\\report\\result_{}.csv".format(
             str(time.time()).split(".")[0])
-        self.datas = self.readCSV(self.data_file)
+        data = self.readCSV(data_file)
         # 数据文件有内容则调用接口，否则直接测试结束
-        if self.datas.__len__() > 0:
+        if data.__len__() > 0:
             results = []
-            for testcase in self.datas:
+            for testcase in data:
                 result = {}
                 result["tenantId"] = testcase["tenantId"]
                 result["mobile"] = testcase["mobile"]
@@ -99,8 +99,7 @@ class Login:
                     "token": app.TOKEN,
                     "Content-Type": "application/json;charset=UTF-8"
                 }
-                self.data = json.dumps(params)
-                response = requests.post(self.url, data=self.data, headers=heda)
+                response = requests.post(self.url, json.dumps(params), headers=heda)
 
                 # 调用assert方法，检查预期结果是否在响应结果中存在
                 assert_value = self.assertResult(result["expect"], response.json().get("message"))
