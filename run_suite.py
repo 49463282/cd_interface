@@ -21,18 +21,19 @@ from email.mime.multipart import MIMEMultipart
 # with open(file, "wb") as f:
 #     runner = HTMLTestRunner(f, title="草动接口测试报告", description="自动化测试")
 #     runner.run(suite)
-#
 def all_case():
     # 待执行用例的目录
     # case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
-    # case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
     suite = unittest.TestSuite()
-    # discover = unittest.defaultTestLoader.discover(case_dir,
-    #                                                pattern="Test*.py",
-    #                                                top_level_dir=None)
-    # suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
     suite.addTest(TestLogin('test_login'))
-    suite.addTest(TestCd('test_order'))
+    unittest.TextTestRunner().run(suite)
+    case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
+    suite = unittest.TestSuite()
+    discover = unittest.defaultTestLoader.discover(case_dir,
+                                                   pattern="Test*.py",
+                                                   top_level_dir=None)
+    suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
+    # suite.addTest(TestCd('test_order'))
     return suite
 
 
@@ -73,7 +74,7 @@ def send_mail(report):
     except:
         smtp = smtplib.SMTP_SSL(smtpserver, port)
         smtp.login(username, password)  # 登录
-    smtp.sendmail(sender, receiver, msg.as_string())  # 发送
+    # smtp.sendmail(sender, receiver, msg.as_string())  # 发送
     smtp.quit()
     print("邮件已发出！注意查收。")
 

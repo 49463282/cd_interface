@@ -1,0 +1,4 @@
+tenantId,mobile,password,uuid,brandType,type,expect,result
+100,18549811213,qwe123,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,成功,
+100,18549811212,qwe123,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,用户不存在,
+100,18549811213,qwe122,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,密码错误,

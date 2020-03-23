@@ -4,6 +4,8 @@ from api.LoginApi import Login
 import requests
 import app
 from tools.redis_uat import DBRedis
+import csv
+import json
 
 
 class TestLogin(unittest.TestCase):
@@ -12,7 +14,6 @@ class TestLogin(unittest.TestCase):
     def setUp(self):
         self.Login = Login()
         requests.get(app.BASE_URL + "/manager/sysuser/imagecode?uuid=1e4cfdb3-ba66-4082-892b-13ba4059436d")
-
     def test_login(self):
         # 查询图形验证码
         r = DBRedis.get_connect()
