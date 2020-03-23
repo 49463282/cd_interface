@@ -16,22 +16,28 @@ class Login:
         :param filename: 需要读取的数据文件
         :return: [{data1},{data2}...]
         '''
-        datas = []
-        # 以DictReader的方式读取数据文件，方便与json互做转换
-        with open(filename, 'r') as csvfile:
-            # 从文件里读取到的数据转换成字典列表的格式
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                data = {}
-                data['tenantId'] = row['tenantId']
-                data['mobile'] = row['mobile']
-                data['password'] = str(row['password'])
-                data['uuid'] = str(row['uuid'])
-                data['brandType'] = row['brandType']
-                data['type'] = row['type']
-                data['expect'] = row['expect']
-                datas.append(data)
-                return datas
+        try:
+            datas = []
+            # 以DictReader的方式读取数据文件，方便与json互做转换
+            with open(filename, 'r') as csvfile:
+                # 从文件里读取到的数据转换成字典列表的格式
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    data = {}
+                    data['tenantId'] = row['tenantId']
+                    data['mobile'] = row['mobile']
+                    data['password'] = str(row['password'])
+                    data['uuid'] = str(row['uuid'])
+                    data['brandType'] = row['brandType']
+                    data['type'] = row['type']
+                    data['expect'] = json.dumps(row['expect']) \
+                        if isinstance(row['expect'], dict) \
+                        else row['expect']
+                    datas.append(data)
+                    print(datas)
+                    return datas
+        except FileNotFoundError:
+            return datas
 
     def assertResult(self, except_value, real_value):
         '''
@@ -95,6 +101,7 @@ class Login:
                 }
                 # data = {"tenantId": 100, "mobile": "18549811213", "password": "qwe123", "code": code,
                 #         "uuid": "1e4cfdb3-ba66-4082-892b-13ba4059436d", "brandType": 1, "type": 0}
+                print(params)
                 heda = {
                     "token": app.TOKEN,
                     "Content-Type": "application/json;charset=UTF-8"
