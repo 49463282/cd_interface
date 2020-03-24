@@ -24,6 +24,7 @@ class Login:
                 for row in reader:
                     data = {}
                     data['id'] = row['id']
+                    data['method'] = row['method']
                     data['tenantId'] = row['tenantId']
                     data['mobile'] = row['mobile']
                     data['password'] = str(row['password'])
@@ -57,7 +58,7 @@ class Login:
         '''
         # 以DictWriter的方式写文件
         with open(filename, 'w+') as csvfile:
-            headers = "id,tenantId,mobile,password,uuid,code,brandType,type,expect,real_value,assert_value".split(
+            headers = "id,method,tenantId,mobile,password,uuid,code,brandType,type,expect,real_value,assert_value".split(
                 ",")
             writer = csv.DictWriter(csvfile, fieldnames=headers)
             # 写表头

@@ -1,5 +1,5 @@
-id,tenantId,mobile,password,uuid,brandType,type,expect,result
-1,100,18549811213,qwe123,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,成功,
-2,100,18549811212,qwe123,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,用户不存在,
-3,100,18549811213,qwe122,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,密码错误,
-4,,,,,,,手机号不能为空,
+id,method,tenantId,mobile,password,uuid,brandType,type,expect,result
+1,POST,100,18549811213,qwe123,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,成功,
+2,POST,100,18549811212,qwe123,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,用户不存在,
+3,POST,100,18549811213,qwe122,1e4cfdb3-ba66-4082-892b-13ba4059436d,1,0,密码错误,
+4,POST,,,,,,,手机号不能为空,

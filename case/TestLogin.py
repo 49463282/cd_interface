@@ -3,6 +3,7 @@ import unittest
 from api.LoginApi import Login
 import requests
 import app
+from tools.Request import Request
 from tools.redis_uat import DBRedis
 import time
 import json
@@ -32,6 +33,7 @@ class TestLogin(unittest.TestCase):
             for testcase in data:
                 result = {}
                 result["id"] = testcase["id"]
+                result["method"] = testcase["method"]
                 result["tenantId"] = testcase["tenantId"]
                 result["mobile"] = testcase["mobile"]
                 result["password"] = testcase["password"]
@@ -57,9 +59,8 @@ class TestLogin(unittest.TestCase):
                     "Content-Type": "application/json;charset=UTF-8"
                 }
                 url = app.BASE_URL + '/manager/sysuser/login'
-
                 # response = Login.get_login(url, params, heda)
-                response = requests.post(url, json.dumps(params), headers=heda)
+                response = Request().httprequest(result["method"], url, params, heda)
                 # 调用assert方法，检查预期结果是否在响应结果中存在
                 assert_value = self.Login.assertResult(result["expect"], response.json().get("message"))
                 result["real_value"] = response.text
