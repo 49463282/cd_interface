@@ -1,7 +1,7 @@
 # coding=utf-8
 import unittest
 from api.OrderApi import Order
-from tools.pymysql_cd import DBUtil
+from tools.PyMysql_cd import DBUtil
 
 
 class TestCd(unittest.TestCase):
