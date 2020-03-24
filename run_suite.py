@@ -1,7 +1,5 @@
 # coding=utf-8
 import unittest
-
-from case.TestCd import TestCd
 from case.TestLogin import TestLogin
 from tools.HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
@@ -9,25 +7,16 @@ from email.header import Header
 import smtplib
 import os
 from email.mime.multipart import MIMEMultipart
+import time
 
 
-# suite = unittest.TestSuite()
-#
-# suite.addTest(TestLogin('test_login'))
-# suite.addTest(TestCd('test_order'))
-# # 创建文件（生成的测试报告）
-#
-# file = "./report/" + time.strftime("%Y-%m-%d" "%H%M%S" + "report.html")
-# with open(file, "wb") as f:
-#     runner = HTMLTestRunner(f, title="草动接口测试报告", description="自动化测试")
-#     runner.run(suite)
 def all_case():
     # 待执行用例的目录
-    # case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
+    case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
     suite = unittest.TestSuite()
     suite.addTest(TestLogin('test_login'))
     unittest.TextTestRunner().run(suite)
-    case_dir = os.path.join(os.path.abspath(__file__), "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\")
+    case_dir = os.path.join(os.path.abspath(__file__), case_dir)
     suite = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover(case_dir,
                                                    pattern="Test*.py",
@@ -88,11 +77,6 @@ def new_report(report):
 
 
 if __name__ == "__main__":
-    # 返回实例
-    # suite = unittest.TextTestRunner()
-    # 导入第三方模块HTMLTestRunner
-    import time
-
     # 获取当前时间，这样便于下面的使用。
     now = time.strftime("%Y-%m-%d" + "%H_%M_%S", time.localtime(time.time()))
     # 保存生成报告的路径
