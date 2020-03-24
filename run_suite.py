@@ -14,7 +14,7 @@ def all_case():
     # 待执行用例的目录
     case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
     suite = unittest.TestSuite()
-    suite.addTest(TestLogin('test_login'))
+    suite.addTest(TestLogin('test_token'))
     unittest.TextTestRunner().run(suite)
     case_dir = os.path.join(os.path.abspath(__file__), case_dir)
     suite = unittest.TestSuite()
