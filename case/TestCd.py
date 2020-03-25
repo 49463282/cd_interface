@@ -17,11 +17,11 @@ class TestCd(unittest.TestCase):
         response = self.order.get_order_list()
         # 断言判断
         self.assertEqual(200, response.json().get("status"))
-        conn = DBUtil.get_connect(database)
-        cursor = DBUtil.get_cursor(conn)
-        sql = "select * from t_user where mobile = 18549811213 and type = 0"
-        cursor.execute(sql)
-        ro = cursor.fetchall()
-        for r in ro:
-            print(r)
-        DBUtil.close_res(cursor, conn)
+        # conn = DBUtil.get_connect(database)
+        # cursor = DBUtil.get_cursor(conn)
+        # sql = "select * from t_user where mobile = 18549811213 and type = 0"
+        # cursor.execute(sql)
+        # ro = cursor.fetchall()
+        # for r in ro:
+        #     print(r)
+        # DBUtil.close_res(cursor, conn)

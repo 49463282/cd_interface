@@ -3,15 +3,7 @@ import csv
 
 
 class CSV:
-    def readCSV(self, filename):
-        '''
-        :param filename: 需要读取的数据文件
-        :return: [{data1},{data2}...]
-        '''
-        # 以DictReader的方式读取数据文件，方便与json互做转换
-        with open(filename, 'r') as csvfile:
-            # 从文件里读取到的数据转换成字典列表的格式
-            return  csv.DictReader(csvfile)
+
     def assertResult(self, except_value, real_value):
         '''
         校验样本字符串中是否包含指定字符串
