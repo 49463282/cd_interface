@@ -1,7 +1,7 @@
 # coding=utf-8
 import unittest
 from case import TestLogin, TestProduct
-from case.TestCd import TestCd
+from case.TestOrder import TestOeder
 from tools.HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.header import Header
@@ -15,7 +15,7 @@ suite.addTest(TestLogin.TestLogin('test_token'))
 suite.addTest(TestLogin.TestLogin('test_login'))
 suite.addTest(TestProduct.TestProduct('test_product_add'))
 suite.addTest(TestProduct.TestProduct('test_product_delete'))
-suite.addTest(TestCd('test_order'))
+suite.addTest(TestOeder('test_order'))
 unittest.TextTestRunner().run(suite)
 
 def all_case():

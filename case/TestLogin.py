@@ -8,6 +8,7 @@ from tools.Redis import DBRedis
 import time
 import json
 import csv
+import os
 
 
 class TestLogin(unittest.TestCase):
@@ -62,13 +63,13 @@ class TestLogin(unittest.TestCase):
             return datas
 
     def test_login(self):
-        data_file = "C:\\Users\\hp\\PycharmProjects\\cd_interface\\data\\login_test.csv"
+        data_file = os.path.abspath("data") + "\\login_test.csv"
         # 指定最终结果生成的数据文件名称
         data = self.readCSV(data_file)
         # 数据文件有内容则调用接口，否则直接测试结束
         if data.__len__() > 0:
             results = []
-            result_file = "C:\\Users\\hp\\PycharmProjects\\cd_interface\\report\\result_{}.csv".format(
+            result_file = os.path.abspath("report") + "\\result_{}.csv".format(
                 str(time.time()).split(".")[0])
             for testcase in data:
                 result = {}

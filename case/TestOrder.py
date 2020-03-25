@@ -4,7 +4,7 @@ from api.OrderApi import Order
 from tools.PyMysql_cd import DBUtil
 
 
-class TestCd(unittest.TestCase):
+class TestOeder(unittest.TestCase):
 
     # 初始化与销毁
     def setUp(self):
