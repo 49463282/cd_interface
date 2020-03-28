@@ -1,7 +1,6 @@
 # coding=utf-8
 import unittest
-from case import TestLogin, TestProduct
-from case.TestOrder import TestOeder
+from case import TestLogin, TestProduct,TestOrder
 from tools.HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.header import Header
@@ -13,12 +12,12 @@ import time
 suite = unittest.TestSuite()
 suite.addTest(TestLogin.TestLogin('test_token'))
 suite.addTest(TestLogin.TestLogin('test_login'))
-suite.addTest(TestProduct.TestProduct('test_product_add'))
-suite.addTest(TestProduct.TestProduct('test_product_addstoreproduct'))
-suite.addTest(TestProduct.TestProduct('test_on_updatebatchproduct'))
-suite.addTest(TestProduct.TestProduct('test_the_updatebatchproduct'))
-suite.addTest(TestProduct.TestProduct('test_product_delete'))
-suite.addTest(TestOeder('test_order'))
+# suite.addTest(TestProduct.TestProduct('test_product_add'))
+# suite.addTest(TestProduct.TestProduct('test_product_addstoreproduct'))
+# suite.addTest(TestProduct.TestProduct('test_on_updatebatchproduct'))
+suite.addTest(TestOrder.TestOrder('test_create_order'))
+# suite.addTest(TestProduct.TestProduct('test_the_updatebatchproduct'))
+# suite.addTest(TestProduct.TestProduct('test_product_delete'))
 unittest.TextTestRunner().run(suite)
 def all_case():
     # 待执行用例的目录
