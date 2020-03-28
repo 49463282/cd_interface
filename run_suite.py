@@ -14,13 +14,15 @@ suite = unittest.TestSuite()
 suite.addTest(TestLogin.TestLogin('test_token'))
 suite.addTest(TestLogin.TestLogin('test_login'))
 suite.addTest(TestProduct.TestProduct('test_product_add'))
+suite.addTest(TestProduct.TestProduct('test_product_addstoreproduct'))
+suite.addTest(TestProduct.TestProduct('test_on_updatebatchproduct'))
+suite.addTest(TestProduct.TestProduct('test_the_updatebatchproduct'))
 suite.addTest(TestProduct.TestProduct('test_product_delete'))
 suite.addTest(TestOeder('test_order'))
 unittest.TextTestRunner().run(suite)
-
 def all_case():
     # 待执行用例的目录
-    case_dir = "C:\\Users\hp\PycharmProjects\\cd_interface\\case\\"
+    case_dir = os.path.abspath("case")
     suite = unittest.TestSuite()
     suite.addTest(TestLogin.TestLogin('test_token'))
     suite.addTest(TestLogin.TestLogin('test_login'))
@@ -34,7 +36,6 @@ def all_case():
     # suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
 
     # return suite
-
 
 # ==============定义发送邮件==========
 # def send_mail(report):
@@ -88,21 +89,21 @@ def all_case():
 
 #
 # if __name__ == "__main__":
-    # 获取当前时间，这样便于下面的使用。
-    # now = time.strftime("%Y-%m-%d" + "%H_%M_%S", time.localtime(time.time()))
-    # # # 保存生成报告的路径
-    # report_path = "C:\\Users\hp\PycharmProjects\\cd_interface\\report\\" + now + "_result.html"
-    # fp = open(report_path, 'wb')
-    # runner = HTMLTestRunner(stream=fp,
-    #                         title=u"这是我的自动化测试用例",
-    #                         description=u"用例执行情况",
-    #                         verbosity=2
-    #                         )
-    # # run 所有用例
-    # runner.run(all_case())
-    # 关闭文件，记住用open()打开文件后一定要记得关闭它，否则会占用系统的可打开文件句柄数。
-    # fp.close()
-    # # 测试报告文件夹
-    # test_path = "C:\\Users\hp\PycharmProjects\\cd_interface\\report\\"
-    # new_report = new_report(test_path)
-    # send_mail(new_report)  # 发送测试报告
+# 获取当前时间，这样便于下面的使用。
+# now = time.strftime("%Y-%m-%d" + "%H_%M_%S", time.localtime(time.time()))
+# # # 保存生成报告的路径
+# report_path = "C:\\Users\hp\PycharmProjects\\cd_interface\\report\\" + now + "_result.html"
+# fp = open(report_path, 'wb')
+# runner = HTMLTestRunner(stream=fp,
+#                         title=u"这是我的自动化测试用例",
+#                         description=u"用例执行情况",
+#                         verbosity=2
+#                         )
+# # run 所有用例
+# runner.run(all_case())
+# 关闭文件，记住用open()打开文件后一定要记得关闭它，否则会占用系统的可打开文件句柄数。
+# fp.close()
+# # 测试报告文件夹
+# test_path = "C:\\Users\hp\PycharmProjects\\cd_interface\\report\\"
+# new_report = new_report(test_path)
+# send_mail(new_report)  # 发送测试报告

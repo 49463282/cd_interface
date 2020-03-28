@@ -65,13 +65,13 @@ class TestLogin(unittest.TestCase):
     def test_login(self):
         # 获取测试用例的路径
         data_file = os.path.abspath("data") + "\\login_test.csv"
+        # 指定最终结果生成的数据文件名称
+        result_file = os.path.abspath("report") + "\\login_{}.csv".format(str(time.time()).split(".")[0])
         # 打开测试用例
         data = self.readCSV(data_file)
         # 数据文件有内容则调用接口，否则直接测试结束
         if data.__len__() > 0:
             results = []
-            result_file = os.path.abspath("report") + "\\result_{}.csv".format(
-                str(time.time()).split(".")[0])
             for testcase in data:
                 result = {}
                 result["id"] = testcase["id"]
