@@ -15,8 +15,10 @@ class TestLogin(unittest.TestCase):
 
     # 初始化与销毁
     def setUp(self):
+        # 生成图形验证码
         requests.get(app.BASE_URL + "/manager/sysuser/imagecode?uuid=038add55-52dd-4e22-b2a7-78306d3b0074")
         r = DBRedis.get_connect()
+        # 查询图形验证码
         self.code = r.get('image:code:uuid:038add55-52dd-4e22-b2a7-78306d3b0074')
         self.hade = {
             "token": app.TOKEN,
@@ -25,8 +27,6 @@ class TestLogin(unittest.TestCase):
         self.url = app.BASE_URL + '/manager/sysuser/login'
 
     def test_token(self):
-        # 查询图形验证码
-
         # 调用请求业务
         data = {"tenantId": 100, "mobile": "18549811212", "password": "qwe123", "code": self.code,
                 "uuid": "038add55-52dd-4e22-b2a7-78306d3b0074", "brandType": 1, "type": 0}

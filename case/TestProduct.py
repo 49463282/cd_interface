@@ -1,7 +1,6 @@
 # coding=utf-8
 import os
 import unittest
-
 import requests
 from tools.PyMysql_cd import DBUtil
 import app
@@ -10,12 +9,11 @@ import time
 import json
 import csv
 from tools.CSV import CSV
-from urllib import parse
 
 
 class TestProduct(unittest.TestCase):
 
-    # 初始化与销毁
+    # 初始化请求头
     def setUp(self):
         self.hade = {
             "token": app.TOKEN,
@@ -85,6 +83,7 @@ class TestProduct(unittest.TestCase):
         # print(response.text)
         self.assertEqual("成功", response.json().get("message"))
 
+    # 选择同步商品到门店
     def test_product_addstoreproduct(self):
         # 查询新增的商品id
         database = "cd-product_uat"
@@ -95,11 +94,11 @@ class TestProduct(unittest.TestCase):
         r = cursor.fetchone()
         self.id = str(r[0])
         DBUtil.close_res(cursor, conn)
-        # 选择商品到分公司
         id = []
         str_id = str(self.id)
         id.append(str_id)
         c = list(map(eval, id))
+        # 选择商品到分公司
         url = app.BASE_URL + "/manager/product/addstoreproduct"
         data = {"pids": c, "mark": 1, "companyIds": [27099]}
         requests.post(url, json.dumps(data), headers=self.hade)
@@ -155,7 +154,6 @@ class TestProduct(unittest.TestCase):
                 }
                 url = app.BASE_URL + "/manager/product/addstoreproduct"
                 response = Request().httprequest(result["method"], url, params, self.hade)
-                # print(response.status_code)
                 # 调用assert方法，检查预期结果是否在响应结果中存在
                 database = "cd-product_uat"
                 conn = DBUtil.get_connect(database)
@@ -188,14 +186,14 @@ class TestProduct(unittest.TestCase):
         self.assertEqual("成功", response.json().get("message"))
 
     def test_on_updatebatchproduct(self):
-        self.test_product_addstoreproduct()
+        # self.test_product_addstoreproduct()
         data = {"pidList": self.c, "status": 1, "companyIdList": self.companyIds}
         url = app.BASE_URL + "/manager/storeproduct/updatebatchproduct"
         response = requests.post(url, json.dumps(data), headers=self.hade)
         self.assertEqual("成功", response.json().get("message"))
 
     def test_the_updatebatchproduct(self):
-        self.test_product_addstoreproduct()
+        # self.test_product_addstoreproduct()
         data = {"pidList": self.c, "status": 0, "companyIdList": self.companyIds}
         url = app.BASE_URL + "/manager/storeproduct/updatebatchproduct"
         response = requests.post(url, json.dumps(data), headers=self.hade)

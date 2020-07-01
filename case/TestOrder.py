@@ -25,7 +25,7 @@ class TestOrder(unittest.TestCase):
         cursor.execute(sql)
         r = cursor.fetchone()
         productId = str(r[0])
-        sql = 'select * from t_store_specification_19 where product_id = %s'%(productId)
+        sql = 'select * from t_store_specification_19 where product_id = %s' % (productId)
         cursor.execute(sql)
         r = cursor.fetchone()
         specId = str(r[0])
@@ -34,4 +34,4 @@ class TestOrder(unittest.TestCase):
                 "productList": [{"productId": productId, "specId": specId, "productNum": 1}], "source": 0,
                 "v": "2.6.0"}
         response = requests.post(url, json.dumps(data), headers=self.heda)
-        self.assertEqual("成功",response.json().get("message"))
+        self.assertEqual("成功", response.json().get("message"))
