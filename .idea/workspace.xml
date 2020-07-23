@@ -19,18 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cy_zy/Lw_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1586409829.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1586410025.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1586410126.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1586760331.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1586761925.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1593509493.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/login_1593510414.csv" afterDir="false" />
+    <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="更新">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cy_zy/Lw_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cy_zy/Lw_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/Redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Redis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,8 +237,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_suite" />
-        <item itemvalue="Python.Redis" />
         <item itemvalue="Python.Lw_test" />
+        <item itemvalue="Python.Redis" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python.TestOrder" />
       </list>
@@ -265,6 +256,8 @@
       <updated>1584788207718</updated>
       <workItem from="1593509471286" duration="13260000" />
       <workItem from="1593571862137" duration="2852000" />
+      <workItem from="1594107592659" duration="11981000" />
+      <workItem from="1595483413183" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="加入代码">
       <created>1584789136267</created>
@@ -385,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585361819344</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="更新">
+      <created>1593945403010</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1593945403010</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -442,37 +442,38 @@
     <MESSAGE value="商品新增，商品删除" />
     <MESSAGE value="优化路径写法" />
     <MESSAGE value="商品case" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品case" />
+    <MESSAGE value="更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1593588662443">
+    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1593946989997">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593588662443" />
-    <state width="1877" height="203" key="GridCell.Tab.0.bottom" timestamp="1593944275513">
+    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593946989997" />
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom" timestamp="1594190309231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="203" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593944275513" />
-    <state width="1877" height="203" key="GridCell.Tab.0.center" timestamp="1593944275512">
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309231" />
+    <state width="1877" height="342" key="GridCell.Tab.0.center" timestamp="1594190309229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="203" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593944275512" />
-    <state width="1877" height="203" key="GridCell.Tab.0.left" timestamp="1593944275512">
+    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309229" />
+    <state width="1877" height="342" key="GridCell.Tab.0.left" timestamp="1594190309229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="203" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593944275512" />
-    <state width="1877" height="203" key="GridCell.Tab.0.right" timestamp="1593944275513">
+    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309229" />
+    <state width="1877" height="342" key="GridCell.Tab.0.right" timestamp="1594190309230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="203" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593944275513" />
+    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309230" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1593944318407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593944318407" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1593944275504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cd_interface$Lw_test.coverage" NAME="Lw_test Coverage Results" MODIFIED="1593571901954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cy_zy" />
+    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1595483535043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$Lw_test.coverage" NAME="Lw_test Coverage Results" MODIFIED="1594190309222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cy_zy" />
     <SUITE FILE_PATH="coverage/cd_interface$Redis.coverage" NAME="Redis Coverage Results" MODIFIED="1593924605192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1593509836785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
