@@ -11,12 +11,12 @@ import time
 
 suite = unittest.TestSuite()
 suite.addTest(TestLogin.TestLogin('test_token'))
-suite.addTest(TestLogin.TestLogin('test_login'))
+# suite.addTest(TestLogin.TestLogin('test_login'))
 suite.addTest(TestProduct.TestProduct('test_product_add'))
 suite.addTest(TestProduct.TestProduct('test_product_addstoreproduct'))
-suite.addTest(TestProduct.TestProduct('test_on_updatebatchproduct'))
+suite.addTest(TestOrder.TestOrder('test_cart_temporary_add'))
+suite.addTest(TestOrder.TestOrder('test_receiveaddress_add'))
 suite.addTest(TestOrder.TestOrder('test_create_order'))
-suite.addTest(TestProduct.TestProduct('test_the_updatebatchproduct'))
 suite.addTest(TestProduct.TestProduct('test_product_delete'))
 unittest.TextTestRunner().run(suite)
 

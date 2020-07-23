@@ -19,10 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="更新">
+    <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cy_zy/Lw_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cy_zy/Lw_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/Redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/TestLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestLogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/TestOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/TestProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestProduct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1586409829.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1586410025.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1586410126.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1586760331.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1586761925.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1593509493.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1593510414.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_suite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,72 +149,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Redis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cd_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/Redis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestOrder" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cd_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/TestOrder.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cd_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="run_suite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -227,20 +171,65 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for TestProduct.TestProduct" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestProduct.TestProduct&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for TestProduct.TestProduct.test_product_add" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestProduct.TestProduct.test_product_add&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for TestProduct.TestProduct.test_product_addstoreproduct" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestProduct.TestProduct.test_product_addstoreproduct&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.run_suite" />
-      <item itemvalue="Python.TestOrder" />
-      <item itemvalue="Python.app" />
       <item itemvalue="Python.Lw_test" />
-      <item itemvalue="Python.Redis" />
+      <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_add" />
+      <item itemvalue="Python tests.Unittests for TestProduct.TestProduct" />
+      <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_addstoreproduct" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_suite" />
+        <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_addstoreproduct" />
         <item itemvalue="Python.Lw_test" />
-        <item itemvalue="Python.Redis" />
-        <item itemvalue="Python.app" />
-        <item itemvalue="Python.TestOrder" />
+        <item itemvalue="Python tests.Unittests for TestProduct.TestProduct" />
+        <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_add" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +246,7 @@
       <workItem from="1593509471286" duration="13260000" />
       <workItem from="1593571862137" duration="2852000" />
       <workItem from="1594107592659" duration="11981000" />
-      <workItem from="1595483413183" duration="164000" />
+      <workItem from="1595483413183" duration="15642000" />
     </task>
     <task id="LOCAL-00001" summary="加入代码">
       <created>1584789136267</created>
@@ -385,40 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1593945403010</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="更新">
+      <created>1595483588745</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1595483588745</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_for_TestOrder_TestOeder - 2020.03.28 at 10h 59m 53s.xml">
-      <configuration name="Unittests for TestOrder.TestOeder" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_TestOrder_TestOeder - 2020.03.28 at 11h 00m 08s.xml">
-      <configuration name="Unittests for TestOrder.TestOeder" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 00m 59s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 01m 17s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 01m 41s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 02m 24s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 02m 47s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 04m 27s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 12m 41s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestOrder_py - 2020.03.28 at 11h 42m 17s.xml">
-      <configuration name="Unittests in TestOrder.py" configurationId="tests" />
-    </history-entry>
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -446,35 +410,66 @@
     <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1593946989997">
+    <state x="842" y="382" key="#Notifications" timestamp="1595483895781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593946989997" />
-    <state width="1877" height="342" key="GridCell.Tab.0.bottom" timestamp="1594190309231">
+    <state x="842" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595483895781" />
+    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1595483585465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309231" />
-    <state width="1877" height="342" key="GridCell.Tab.0.center" timestamp="1594190309229">
+    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595483585465" />
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom" timestamp="1595499078968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309229" />
-    <state width="1877" height="342" key="GridCell.Tab.0.left" timestamp="1594190309229">
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595499078968" />
+    <state width="1877" height="342" key="GridCell.Tab.0.center" timestamp="1595499078968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309229" />
-    <state width="1877" height="342" key="GridCell.Tab.0.right" timestamp="1594190309230">
+    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595499078968" />
+    <state width="1877" height="342" key="GridCell.Tab.0.left" timestamp="1595499078968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594190309230" />
+    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595499078968" />
+    <state width="1877" height="342" key="GridCell.Tab.0.right" timestamp="1595499078968">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595499078968" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1595497258316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595497258316" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1595497258316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595497258316" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1595497258316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595497258316" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1595497258316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595497258316" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1593944318407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593944318407" />
+    <state x="573" y="127" width="782" height="717" key="find.popup" timestamp="1595486882469">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="573" y="127" width="782" height="717" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595486882469" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595490593158">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595490593158" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1595483535043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cd_interface$Lw_test.coverage" NAME="Lw_test Coverage Results" MODIFIED="1594190309222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cy_zy" />
+    <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_addstoreproduct.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_addstoreproduct Coverage Results" MODIFIED="1595488622296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1595499061642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct.coverage" NAME="Unittests for TestProduct.TestProduct Coverage Results" MODIFIED="1595484146767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/cd_interface$Lw_test.coverage" NAME="Lw_test Coverage Results" MODIFIED="1595484378762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cy_zy" />
     <SUITE FILE_PATH="coverage/cd_interface$Redis.coverage" NAME="Redis Coverage Results" MODIFIED="1593924605192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1593509836785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_add.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_add Coverage Results" MODIFIED="1595484132896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
   </component>
 </project>

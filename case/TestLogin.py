@@ -73,13 +73,18 @@ class TestLogin(unittest.TestCase):
         if data.__len__() > 0:
             results = []
             for testcase in data:
+                # 生成图形验证码
+                requests.get(app.BASE_URL + "/manager/sysuser/imagecode?uuid=038add55-52dd-4e22-b2a7-78306d3b0074")
+                r = DBRedis.get_connect()
+                # 查询图形验证码
+                code = r.get('image:code:uuid:038add55-52dd-4e22-b2a7-78306d3b0074')
                 result = {}
                 result["id"] = testcase["id"]
                 result["method"] = testcase["method"]
                 result["tenantId"] = testcase["tenantId"]
                 result["mobile"] = testcase["mobile"]
                 result["password"] = testcase["password"]
-                result["code"] = self.code
+                result["code"] = code
                 result["uuid"] = testcase["uuid"]
                 result["brandType"] = testcase["brandType"]
                 result["type"] = testcase["type"]

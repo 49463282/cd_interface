@@ -9,7 +9,23 @@ import time
 import json
 import csv
 from tools.CSV import CSV
+from faker import Faker
 
+faker = Faker("zh_CN")
+global product_name
+product_name = faker.name()
+# 随机查询一个分公司id
+sql = "select id from t_store where type = 1 and status = 1 "
+database = "cd-user_uat"
+conn = DBUtil.get_connect(database)
+cursor = DBUtil.get_cursor(conn)
+DBUtil.close_res(cursor, conn)
+cursor.execute(sql)
+r = cursor.fetchone()
+global companyId
+companyId = int(r[0])
+global store
+store = companyId % 40
 
 class TestProduct(unittest.TestCase):
 
@@ -50,38 +66,42 @@ class TestProduct(unittest.TestCase):
             return datas
 
     def test_product_add(self):
-        data = {"name": "接口测试", "categoryList": [], "labelList": [], "materialMainList": [{"id": 12638, "rank": 1}],
-                "materialnotMainList": [], "details": "接口测试", "showImages": "", "productCode": "", "weight": "0",
-                "volume": "0", "virtualTotal": "", "type": 1, "status": 0, "isOpen": 1,
+        data = {"name": product_name,
+                "categoryList": [],
+                "labelList": [],
+                "materialMainList": [{"id": 12638, "rank": 1}],
+                "materialnotMainList": [],
+                "details": product_name,
+                "showImages": "",
+                "productCode": "",
+                "weight": "0",
+                "volume": "0",
+                "virtualTotal": "",
+                "type": 1,
+                "status": 0,
+                "isOpen": 1,
                 "commissionRulesDTO": {"empAmount": "1", "empPercent": "", "empType": 2, "empSwitch": 1, "id": ""},
-                "expressFree": 1, "attributeList": [{"key": "颜色",
-                                                     "value": [{"values": "红色", "img": ""}, {"values": "绿色", "img": ""},
-                                                               {"values": "黄色", "img": ""}], "isShow": 1}, {"key": "尺寸",
-                                                                                                            "value": [{
-                                                                                                                "values": "150cm",
-                                                                                                                "img": ""},
-                                                                                                                {
-                                                                                                                    "values": "160cm",
-                                                                                                                    "img": ""}],
-                                                                                                            "isShow": 1}],
+                "expressFree": 1,
+                "attributeList": [{"key": "颜色",
+                                   "value": [{"values": "黄色", "img": ""}], "isShow": 1},
+                                  {"key": "尺寸",
+                                   "value": [{"values": "160cm", "img": ""}], "isShow": 1}],
                 "specificationList": [
-                    {"id": "", "imgUrl": "", "inventory": "99", "prePrice": "199", "price": "99", "specCode": "",
-                     "specContent": "红色，150cm", "status": 1},
-                    {"id": "", "imgUrl": "", "inventory": "99", "prePrice": "199", "price": "99", "specCode": "",
-                     "specContent": "红色，160cm", "status": 1},
-                    {"id": "", "imgUrl": "", "inventory": "99", "prePrice": "199", "price": "99", "specCode": "",
-                     "specContent": "绿色，150cm", "status": 1},
-                    {"id": "", "imgUrl": "", "inventory": "99", "prePrice": "199", "price": "99", "specCode": "",
-                     "specContent": "绿色，160cm", "status": 1},
-                    {"id": "", "imgUrl": "", "inventory": "99", "prePrice": "199", "price": "99", "specCode": "",
-                     "specContent": "黄色，150cm", "status": 1},
-                    {"id": "", "imgUrl": "", "inventory": "99", "prePrice": "199", "price": "99", "specCode": "",
-                     "specContent": "黄色，160cm", "status": 1}],
-                "batch": {"prePrice": "199", "price": "99", "inventory": "99"}, "isVip": 1}
+                    {"id": "",
+                     "imgUrl": "",
+                     "inventory": "99",
+                     "prePrice": "199",
+                     "price": "99",
+                     "specCode": "",
+                     "specContent": "红色，150cm",
+                     "status": 1}],
+                "batch": {"prePrice": "199",
+                          "price": "99",
+                          "inventory": "99"},
+                "isVip": 1}
         url = app.BASE_URL + "/manager/product/add"
         response = requests.post(url, json.dumps(data), headers=self.hade)
-        # print(response.text)
-        self.assertEqual("成功", response.json().get("message"))
+        self.assertEqual("处理成功", response.json().get("message"))
 
     # 选择同步商品到门店
     def test_product_addstoreproduct(self):
@@ -89,7 +109,7 @@ class TestProduct(unittest.TestCase):
         database = "cd-product_uat"
         conn = DBUtil.get_connect(database)
         cursor = DBUtil.get_cursor(conn)
-        sql = 'select id from t_product where name = "接口测试" and tenant_id = 100 and `status` = 0'
+        sql = "select id from t_product where name = '%s' and tenant_id = 100 and `status` = 0" % product_name
         cursor.execute(sql)
         r = cursor.fetchone()
         self.id = str(r[0])
@@ -97,23 +117,22 @@ class TestProduct(unittest.TestCase):
         id = []
         str_id = str(self.id)
         id.append(str_id)
-        c = list(map(eval, id))
+        global productId
+        productId = list(map(eval, id))
         # 选择商品到分公司
         url = app.BASE_URL + "/manager/product/addstoreproduct"
-        data = {"pids": c, "mark": 1, "companyIds": [27099]}
+        data = {"pids": productId, "mark": 1, "companyIds": [companyId]}
         requests.post(url, json.dumps(data), headers=self.hade)
         # 调用assert方法，检查预期结果是否在响应结果中存在
         database = "cd-product_uat"
         conn = DBUtil.get_connect(database)
         cursor = DBUtil.get_cursor(conn)
         DBUtil.close_res(cursor, conn)
-        sql = "select inventory from t_store_product where name = '接口测试' and tenant_id = 100"
+        sql = "select inventory from t_store_product_%d where name = '%s' and tenant_id = 100" % (store, product_name)
         cursor.execute(sql)
         r = cursor.fetchone()
-        DBUtil.close_res(cursor, conn)
         inventory = str(r[0])
-        self.assertEqual(inventory, str(594))
-        # print(inventory)
+        self.assertEqual(inventory, str(99))
         # 获取测试用例的路径
         data_file = os.path.abspath("data") + "\\product_addstoreproduct.csv"
         # 指定最终结果生成的数据文件名称
@@ -159,7 +178,7 @@ class TestProduct(unittest.TestCase):
                 conn = DBUtil.get_connect(database)
                 cursor = DBUtil.get_cursor(conn)
                 DBUtil.close_res(cursor, conn)
-                sql = "select inventory,express_free from t_store_product where name = '接口测试' and tenant_id = 100"
+                sql = "select inventory,express_free from t_store_product where name = '%s' and tenant_id = 100" % product_name
                 cursor.execute(sql)
                 r = cursor.fetchone()
                 DBUtil.close_res(cursor, conn)
@@ -178,23 +197,23 @@ class TestProduct(unittest.TestCase):
         database = "cd-product_uat"
         conn = DBUtil.get_connect(database)
         cursor = DBUtil.get_cursor(conn)
-        sql = 'select id from t_product where name = "接口测试" and tenant_id = 100 and `status` = 0'
+        sql = 'select id from t_product where name = "%s" and tenant_id = 100 and `status` = 0' % product_name
         cursor.execute(sql)
         r = cursor.fetchone()
         self.id = str(r[0])
         response = requests.get(app.BASE_URL + "/manager/product/delete?productId=" + self.id, self.hade)
-        self.assertEqual("成功", response.json().get("message"))
+        self.assertEqual("处理成功", response.json().get("message"))
 
+    # 上架门店商品
     def test_on_updatebatchproduct(self):
-        # self.test_product_addstoreproduct()
-        data = {"pidList": self.c, "status": 1, "companyIdList": self.companyIds}
+        data = {"pidList": productId, "status": 1, "companyIdList": companyId}
         url = app.BASE_URL + "/manager/storeproduct/updatebatchproduct"
         response = requests.post(url, json.dumps(data), headers=self.hade)
-        self.assertEqual("成功", response.json().get("message"))
+        self.assertEqual("处理成功", response.json().get("message"))
 
-    def test_the_updatebatchproduct(self):
-        # self.test_product_addstoreproduct()
-        data = {"pidList": self.c, "status": 0, "companyIdList": self.companyIds}
-        url = app.BASE_URL + "/manager/storeproduct/updatebatchproduct"
-        response = requests.post(url, json.dumps(data), headers=self.hade)
-        self.assertEqual("成功", response.json().get("message"))
+    # 下架门店商品
+    # def test_the_updatebatchproduct(self):
+    #     data = {"pidList": productId, "status": 0, "companyIdList": self.companyIds}
+    #     url = app.BASE_URL + "/manager/storeproduct/updatebatchproduct"
+    #     response = requests.post(url, json.dumps(data), headers=self.hade)
+    #     self.assertEqual("成功", response.json().get("message"))
