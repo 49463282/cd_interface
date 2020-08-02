@@ -9,3 +9,4 @@ TOKEN = None
 # 获取资源的绝对路径
 ABS_PATH = os.path.abspath(__file__)
 ABS_DIR = os.path.dirname(ABS_PATH)
+print('执行测试用例')
