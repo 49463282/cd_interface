@@ -46,6 +46,7 @@ class TestOrder(unittest.TestCase):
         specId = str(r[0])
         url = app.BASE_URL + "/miniapp/cart/temporary/add"
         data = {"list": [{"productId": productId, "specId": specId, "number": 1}], "v": "2.6.0"}
+        print(data)
         response = requests.post(url, json.dumps(data), headers=self.heda)
         self.assertEqual("处理成功", response.json().get("message"))
 

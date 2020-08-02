@@ -33,6 +33,7 @@ class TestLogin(unittest.TestCase):
         response = requests.post(self.url, data=json.dumps(data), headers=self.hade)
         token = response.json().get("data").get("token")
         app.TOKEN = token
+        print(token)
         # 断言判断
         self.assertEqual(200, response.json().get("status"))
 

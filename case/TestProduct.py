@@ -27,6 +27,7 @@ companyId = int(r[0])
 global store
 store = companyId % 40
 
+
 class TestProduct(unittest.TestCase):
 
     # 初始化请求头
@@ -65,7 +66,7 @@ class TestProduct(unittest.TestCase):
         except FileNotFoundError:
             return datas
 
-    def test_product_add(self):
+    def test_product_add(self):  # 添加商品
         data = {"name": product_name,
                 "categoryList": [],
                 "labelList": [],
@@ -103,17 +104,12 @@ class TestProduct(unittest.TestCase):
         response = requests.post(url, json.dumps(data), headers=self.hade)
         self.assertEqual("处理成功", response.json().get("message"))
 
-    # 选择同步商品到门店
-    def test_product_addstoreproduct(self):
+    def test_product_addstoreproduct(self):  # 选择同步商品到门店
         # 查询新增的商品id
-        database = "cd-product_uat"
-        conn = DBUtil.get_connect(database)
-        cursor = DBUtil.get_cursor(conn)
         sql = "select id from t_product where name = '%s' and tenant_id = 100 and `status` = 0" % product_name
-        cursor.execute(sql)
-        r = cursor.fetchone()
+        results = DBUtil.product(sql)
+        r = DBUtil.fetch(results, 'fetchone')
         self.id = str(r[0])
-        DBUtil.close_res(cursor, conn)
         id = []
         str_id = str(self.id)
         id.append(str_id)
