@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cy_zy/Lw_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cy_zy/Lw_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/TestLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestLogin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/TestOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/TestProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestProduct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_suite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/PyMysql_cd.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/PyMysql_cd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +141,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="run_suite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,21 +200,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for TestProduct.TestProduct.test_product_add" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="cd_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestProduct.TestProduct.test_product_add&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for TestProduct.TestProduct.test_product_addstoreproduct" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,17 +218,17 @@
     <list>
       <item itemvalue="Python.run_suite" />
       <item itemvalue="Python.Lw_test" />
-      <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_add" />
       <item itemvalue="Python tests.Unittests for TestProduct.TestProduct" />
       <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_addstoreproduct" />
+      <item itemvalue="Python.app" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_suite" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_addstoreproduct" />
         <item itemvalue="Python.Lw_test" />
         <item itemvalue="Python tests.Unittests for TestProduct.TestProduct" />
-        <item itemvalue="Python tests.Unittests for TestProduct.TestProduct.test_product_add" />
       </list>
     </recent_temporary>
   </component>
@@ -240,6 +246,8 @@
       <workItem from="1593571862137" duration="2852000" />
       <workItem from="1594107592659" duration="11981000" />
       <workItem from="1595483413183" duration="27838000" />
+      <workItem from="1596359751536" duration="153000" />
+      <workItem from="1596424982249" duration="5568000" />
     </task>
     <task id="LOCAL-00001" summary="加入代码">
       <created>1584789136267</created>
@@ -381,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595499096348</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="优化pymysql">
+      <created>1596359822900</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1596359822900</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -407,57 +422,58 @@
     <MESSAGE value="优化路径写法" />
     <MESSAGE value="商品case" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="优化pymysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化pymysql" />
   </component>
   <component name="WindowStateProjectService">
     <state x="842" y="382" key="#Notifications" timestamp="1595483895781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="842" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595483895781" />
-    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1595499093266">
+    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1596359817536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595499093266" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1596189257898">
+    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596359817536" />
+    <state width="1877" height="309" key="GridCell.Tab.0.bottom" timestamp="1596452789462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257898" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1596189257897">
+    <state width="1877" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596452789462" />
+    <state width="1877" height="309" key="GridCell.Tab.0.center" timestamp="1596452789461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257897" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1596189257896">
+    <state width="1877" height="309" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596452789461" />
+    <state width="1877" height="309" key="GridCell.Tab.0.left" timestamp="1596452789460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257896" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1596189257897">
+    <state width="1877" height="309" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596452789460" />
+    <state width="1877" height="309" key="GridCell.Tab.0.right" timestamp="1596452789462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257897" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1596189257898">
+    <state width="1877" height="309" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596452789462" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1596450600930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257898" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1596189257898">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596450600930" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1596450600930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257898" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1596189257898">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596450600930" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1596450600930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257898" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1596189257898">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596450600930" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1596450600930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596189257898" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596450600930" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1593944318407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593944318407" />
-    <state x="573" y="127" width="782" height="717" key="find.popup" timestamp="1595486882469">
+    <state x="573" y="127" width="782" height="717" key="find.popup" timestamp="1596444646826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="573" y="127" width="782" height="717" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595486882469" />
+    <state x="573" y="127" width="782" height="717" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596444646826" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595490593158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -465,11 +481,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_addstoreproduct.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_addstoreproduct Coverage Results" MODIFIED="1595488622296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1595923503698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1596452789453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct.coverage" NAME="Unittests for TestProduct.TestProduct Coverage Results" MODIFIED="1595484146767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$Lw_test.coverage" NAME="Lw_test Coverage Results" MODIFIED="1595484378762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cy_zy" />
     <SUITE FILE_PATH="coverage/cd_interface$Redis.coverage" NAME="Redis Coverage Results" MODIFIED="1593924605192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1593509836785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1596450600918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_add.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_add Coverage Results" MODIFIED="1595484132896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
   </component>
 </project>

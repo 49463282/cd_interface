@@ -16,7 +16,7 @@ class DBUtil:
     def product(cls, sql):
         database = "cd-product_uat"
         conn = DBUtil.get_connect(database)
-        cursor = DBUtil.get_cursor(conn)
+        cursor = conn.cursor()
         cursor.execute(sql)
         return cursor
         # if number == 'fetchone':
