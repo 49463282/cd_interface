@@ -3,7 +3,7 @@ import os
 
 # url
 BASE_URL = "http://apiuat.icaodong.com"
-
+WEB_URL = "http://webuat.icaodong.com"
 TOKEN = None
 
 # 获取资源的绝对路径

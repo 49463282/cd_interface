@@ -1,6 +1,6 @@
 # coding=utf-8
 import unittest
-from case import TestLogin, TestProduct, TestOrder
+from case import TestLogin, TestProduct
 from tools.HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.header import Header
@@ -10,12 +10,42 @@ from email.mime.multipart import MIMEMultipart
 import time
 import app
 
+suite = unittest.TestSuite()
+suite.addTest(TestLogin.TestLogin('test_token'))
+suite.addTest(TestProduct.TestProduct('test_product_add'))
+suite.addTest(TestProduct.TestProduct('test_product_addstoreproduct'))
+# suite.addTest(TestOrder.TestOrder('test_cart_temporary_add'))
+# suite.addTest(TestOrder.TestOrder('test_receiveaddress_add'))
+# suite.addTest(TestOrder.TestOrder('test_create_order'))
+suite.addTest(TestProduct.TestProduct('test_storeproduct_delete'))
+suite.addTest(TestProduct.TestProduct('test_product_delete'))
+unittest.TextTestRunner().run(suite)
+# case_dir = os.path.abspath("case")
+# case_dir = os.path.join(os.path.abspath(__file__), case_dir)
+# suite = unittest.TestSuite()
+# discover = unittest.defaultTestLoader.discover(case_dir,
+#                                                pattern="Test*.py",
+#                                                top_level_dir=None)
+# suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
+# now = time.strftime("%Y-%m-%d" + "%H_%M_%S", time.localtime(time.time()))
+# #     # # 保存生成报告的路径
+# report_path = app.ABS_DIR + "\\report\\" + now + "_result.html"
+# fp = open(report_path, 'wb')
+# runner = HTMLTestRunner(stream=fp,
+#                         title=u"这是我的自动化测试用例",
+#                         description=u"用例执行情况",
+#                         verbosity=2
+#                         )
+# # run 所有用例
+# runner.run(suite)
+# # 关闭文件，记住用open()打开文件后一定要记得关闭它，否则会占用系统的可打开文件句柄数。
+# fp.close()
 
 def all_case():
     # 待执行用例的目录
 
-    # suite = unittest.TestSuite()
-    # suite.addTest(TestLogin.TestLogin('test_token'))
+    suite = unittest.TestSuite()
+    suite.addTest(TestLogin.TestLogin('test_token'))
     # suite.addTest(TestLogin.TestLogin('test_login'))
     # suite.addTest(TestProduct.TestProduct('test_product_add'))
     # suite.addTest(TestProduct.TestProduct('test_product_addstoreproduct'))
@@ -23,14 +53,14 @@ def all_case():
     # suite.addTest(TestOrder.TestOrder('test_receiveaddress_add'))
     # suite.addTest(TestOrder.TestOrder('test_create_order'))
     # suite.addTest(TestProduct.TestProduct('test_product_delete'))
-    # unittest.TextTestRunner().run(suite)
-    case_dir = os.path.abspath("case")
-    case_dir = os.path.join(os.path.abspath(__file__), case_dir)
-    suite = unittest.TestSuite()
-    discover = unittest.defaultTestLoader.discover(case_dir,
-                                                   pattern="Test*.py",
-                                                   top_level_dir=None)
-    suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
+    unittest.TextTestRunner().run(suite)
+    # case_dir = os.path.abspath("case")
+    # case_dir = os.path.join(os.path.abspath(__file__), case_dir)
+    # suite = unittest.TestSuite()
+    # discover = unittest.defaultTestLoader.discover(case_dir,
+    #                                                pattern="Test*.py",
+    #                                                top_level_dir=None)
+    # suite.addTests(discover)  # 直接加载 discover    可以兼容python2和3
 
     return suite
 
@@ -41,7 +71,7 @@ def send_mail(report):
     smtpserver = 'smtp.qq.com'  # 发件服务器
     port = 465  # 端口
     username = '49463282@qq.com'  # 发件箱用户名
-    password = 'brnntqcrqputbhih'  # 发件箱密码
+    password = 'wygkntslnkodbgdg'  # 发件箱密码
     sender = '49463282@qq.com'  # 发件人邮箱
     receiver = ['dingyuanming@wowkai.cn']  # 收件人邮箱
     # ----------2.编辑邮件的内容------
@@ -85,22 +115,22 @@ def new_report(report):
     return file_new
 
 
-if __name__ == "__main__":
-    # 获取当前时间，这样便于下面的使用。
-    now = time.strftime("%Y-%m-%d" + "%H_%M_%S", time.localtime(time.time()))
-    # # 保存生成报告的路径
-    report_path = app.ABS_DIR + "\\report\\" + now + "_result.html"
-    fp = open(report_path, 'wb')
-    runner = HTMLTestRunner(stream=fp,
-                            title=u"这是我的自动化测试用例",
-                            description=u"用例执行情况",
-                            verbosity=2
-                            )
-    # run 所有用例
-    runner.run(all_case())
-    # 关闭文件，记住用open()打开文件后一定要记得关闭它，否则会占用系统的可打开文件句柄数。
-    fp.close()
-    # 测试报告文件夹
-    test_path = app.ABS_DIR + "\\report\\"
-    new_report = new_report(test_path)
-    send_mail(new_report)  # 发送测试报告
+# if __name__ == "__main__":
+#     # 获取当前时间，这样便于下面的使用。
+#     now = time.strftime("%Y-%m-%d" + "%H_%M_%S", time.localtime(time.time()))
+#     # # 保存生成报告的路径
+#     report_path = app.ABS_DIR + "\\report\\" + now + "_result.html"
+#     fp = open(report_path, 'wb')
+#     runner = HTMLTestRunner(stream=fp,
+#                             title=u"这是我的自动化测试用例",
+#                             description=u"用例执行情况",
+#                             verbosity=2
+#                             )
+#     # run 所有用例
+#     runner.run(all_case())
+#     # 关闭文件，记住用open()打开文件后一定要记得关闭它，否则会占用系统的可打开文件句柄数。
+#     fp.close()
+#     # 测试报告文件夹
+#     test_path = app.ABS_DIR + "\\report\\"
+#     new_report = new_report(test_path)
+#     send_mail(new_report)  # 发送测试报告

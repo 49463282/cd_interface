@@ -5,7 +5,6 @@ import requests
 import app
 from tools.PyMysql_cd import DBUtil
 from tools.Redis import DBRedis
-from case.TestProduct import product_name, store, companyId
 
 
 class TestOrder(unittest.TestCase):
