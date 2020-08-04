@@ -3,7 +3,7 @@ import os
 import unittest
 import requests
 from tools.PyMysql_cd import DBUtil
-import app
+import app_tool
 from tools.Request import Request
 import time
 import json
@@ -17,7 +17,7 @@ class ApiProduct(unittest.TestCase):
     # 初始化请求头
     def setUp(self):
         self.hade = {
-            "token": app.TOKEN,
+            "token": app_tool.TOKEN,
             "Content-Type": "application/json;charset=UTF-8"
         }
 
@@ -55,13 +55,13 @@ class ApiProduct(unittest.TestCase):
                           "price": "99",
                           "inventory": "99"},
                 "isVip": 1}
-        url = app.BASE_URL + "/manager/product/add"
+        url = app_tool.BASE_URL + "/manager/product/add"
         response = requests.post(url, json.dumps(data), headers=headers)
         return response
 
     # 查询商品库商品列表
     def api_product_list(self, headers):
-        url = app.BASE_URL + '/manager/product/list'
+        url = app_tool.BASE_URL + '/manager/product/list'
         data = {"productCode": "", "specCode": "", "name": "", "storeStatus": "", "categoryIds": "", "labelIds": "",
                 "typeIds": "", "pageNum": 1, "pageSize": 10}
         response = requests.post(url, json.dumps(data), headers=headers)
@@ -69,33 +69,33 @@ class ApiProduct(unittest.TestCase):
 
     # 选择商品到分公司
     def api_product_addstoreproduct(self, productId, companyId, headers):  # 选择同步商品到门店
-        url = app.BASE_URL + "/manager/product/addstoreproduct"
+        url = app_tool.BASE_URL + "/manager/product/addstoreproduct"
         data = {"pids": [int(productId)], "mark": 1, "companyIds": [int(companyId)]}
         response = requests.post(url, json.dumps(data), headers=headers)
         return response
 
     # 查询分公司、门店商品列表
     def api_storeproduct_list(self, companyId, headers):
-        url = app.BASE_URL + "/manager/storeproduct/list" + "?productCode=&specCode=&name=&inventory=&categoryIds=&companyId=" \
+        url = app_tool.BASE_URL + "/manager/storeproduct/list" + "?productCode=&specCode=&name=&inventory=&categoryIds=&companyId=" \
               + companyId + "&storeId=&status=&typeIds=&labelIds=&pageNum=1&pageSize=10"
         response = requests.get(url, headers=headers)
         return response
 
     # 删除分公司商品
     def api_storeproduct_delete(self, productId, headers):
-        url = app.BASE_URL + "/manager/storeproduct/delete_company_product" + "?productId=" + str(productId)
+        url = app_tool.BASE_URL + "/manager/storeproduct/delete_company_product" + "?productId=" + str(productId)
         response = requests.get(url, headers=headers)
         return response
 
     def api_product_delete(self, productId, headers):
-        url = app.BASE_URL + "/manager/product/delete" + "?productId=" + str(productId)
+        url = app_tool.BASE_URL + "/manager/product/delete" + "?productId=" + str(productId)
         response = requests.get(url, headers=headers)
         return response
 
     # 上架门店商品
     def api_on_updatebatchproduct(self, productId, companyId, headers):
         data = {"pidList": productId, "status": 1, "companyIdList": companyId}
-        url = app.BASE_URL + "/manager/storeproduct/updatebatchproduct"
+        url = app_tool.BASE_URL + "/manager/storeproduct/updatebatchproduct"
         response = requests.post(url, json.dumps(data), headers=headers)
         self.assertEqual("处理成功", response.json().get("message"))
 

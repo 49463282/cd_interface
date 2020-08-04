@@ -5,12 +5,12 @@ import pymysql
 class DBUtil:
     @classmethod
     def get_connect(cls, database):
-        # return pymysql.connect(host='134.175.210.250', user='cdmall', password='cdMall@321', database=database,
-        #                        charset='utf8')
-
-        return pymysql.connect(host='134.175.220.145', user='test_read', password='test_read@20200604',
-                               database=database, port=23305,
+        return pymysql.connect(host='134.175.210.250', user='cdmall', password='cdMall@321', database=database,
                                charset='utf8')
+
+        # return pymysql.connect(host='134.175.220.145', user='test_read', password='test_read@20200604',
+        #                        database=database, port=23305,
+        #                        charset='utf8')
 
     @classmethod
     def get_cursor(cls, conn):

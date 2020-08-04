@@ -3,7 +3,6 @@ import os
 
 # url
 BASE_URL = "http://apiuat.icaodong.com"
-PRE_URL = "http://apipre.icaodong.com"
 TOKEN = None
 
 # 获取资源的绝对路径

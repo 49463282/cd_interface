@@ -1,7 +1,7 @@
 # coding=utf-8
 import unittest
 import requests
-import app
+import app_tool
 from tools.CSV import CSV
 from tools.Request import Request
 from tools.Redis import DBRedis
@@ -20,20 +20,20 @@ class ApiLogin(unittest.TestCase):
 
     def api_login(self):
         # 调用请求业务
-        requests.get(app.BASE_URL + "/manager/sysuser/imagecode?uuid=038add55-52dd-4e22-b2a7-78306d3b0074")
+        requests.get(app_tool.BASE_URL + "/manager/sysuser/imagecode?uuid=038add55-52dd-4e22-b2a7-78306d3b0074")
         r = DBRedis.get_connect()
         # 查询图形验证码
         code = r.get('image:code:uuid:038add55-52dd-4e22-b2a7-78306d3b0074')
-        url = app.BASE_URL + '/manager/sysuser/login'
+        url = app_tool.BASE_URL + '/manager/sysuser/login'
         data = {"tenantId": 100, "mobile": "18549811212", "password": "qwe123", "code": code,
                 "uuid": "038add55-52dd-4e22-b2a7-78306d3b0074", "brandType": 1, "type": 0}
         headers = {
-            "token": app.TOKEN,
+            "token": app_tool.TOKEN,
             "Content-Type": "application/json;charset=UTF-8"
         }
         response = requests.post(url, data=json.dumps(data), headers=headers)
         token = response.json().get("data").get("token")
-        app.TOKEN = token
+        app_tool.TOKEN = token
         # 返回请求结果
         return response
 

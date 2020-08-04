@@ -1,7 +1,7 @@
 # coding=utf-8
 import unittest
 import requests
-import app
+import app_tool
 from tools.CSV import CSV
 from tools.Request import Request
 from tools.Redis import DBRedis
@@ -23,7 +23,7 @@ class TestLogin(unittest.TestCase):
         # 调用请求业务
         response = self.ApiLogin.api_login()
         token = response.json().get("data").get("token")
-        app.TOKEN = token
+        app_tool.TOKEN = token
         # 断言判断
         self.assertEqual(200, response.json().get("status"))
 
@@ -65,7 +65,7 @@ class TestLogin(unittest.TestCase):
             results = []
             for testcase in data:
                 # 生成图形验证码
-                requests.get(app.BASE_URL + "/manager/sysuser/imagecode?uuid=038add55-52dd-4e22-b2a7-78306d3b0074")
+                requests.get(app_tool.BASE_URL + "/manager/sysuser/imagecode?uuid=038add55-52dd-4e22-b2a7-78306d3b0074")
                 r = DBRedis.get_connect()
                 # 查询图形验证码
                 code = r.get('image:code:uuid:038add55-52dd-4e22-b2a7-78306d3b0074')

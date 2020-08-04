@@ -8,7 +8,7 @@ import smtplib
 import os
 from email.mime.multipart import MIMEMultipart
 import time
-import app
+import app_tool
 
 suite = unittest.TestSuite()
 suite.addTest(TestLogin.TestLogin('test_token'))
