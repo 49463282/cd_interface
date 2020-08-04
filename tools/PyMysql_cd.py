@@ -5,7 +5,11 @@ import pymysql
 class DBUtil:
     @classmethod
     def get_connect(cls, database):
-        return pymysql.connect(host='134.175.210.250', user='cdmall', password='cdMall@321', database=database,
+        # return pymysql.connect(host='134.175.210.250', user='cdmall', password='cdMall@321', database=database,
+        #                        charset='utf8')
+
+        return pymysql.connect(host='134.175.220.145', user='test_read', password='test_read@20200604',
+                               database=database, port=23305,
                                charset='utf8')
 
     @classmethod
@@ -13,8 +17,7 @@ class DBUtil:
         return conn.cursor()
 
     @classmethod
-    def product(cls, sql):
-        database = "cd-product_uat"
+    def product(cls, sql, database):
         conn = DBUtil.get_connect(database)
         cursor = conn.cursor()
         cursor.execute(sql)
