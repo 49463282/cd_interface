@@ -1,17 +1,21 @@
 # coding=utf-8
 import pymysql
-
+import app_tool
 
 class DBUtil:
     @classmethod
     def get_connect(cls, database):
-        return pymysql.connect(host='134.175.210.250', user='cdmall', password='cdMall@321', database=database,
-                               charset='utf8')
-
-        # return pymysql.connect(host='134.175.220.145', user='test_read', password='test_read@20200604',
-        #                        database=database, port=23305,
-        #                        charset='utf8')
-
+        # 测试数据库
+        if app_tool.BASE_URL == "http://apiuat.icaodong.com":
+            return pymysql.connect(host='134.175.210.250', user='cdmall', password='cdMall@321', database=database,
+                                   charset='utf8')
+        # 生产数据库
+        elif app_tool.BASE_URL == "http://apipre.icaodong.com":
+            return pymysql.connect(host='134.175.220.145', user='test_read', password='test_read@20200604',
+                                   database=database, port=23305,
+                                   charset='utf8')
+        else:
+            return "配置文件填写的请求地址不正确"
     @classmethod
     def get_cursor(cls, conn):
         return conn.cursor()

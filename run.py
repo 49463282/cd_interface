@@ -5,16 +5,15 @@ from tools.Redis import DBRedis
 from tools.PyMysql_cd import DBUtil
 import json
 
-
 app = Flask(__name__, template_folder='t', static_url_path='/static', static_folder='s')
 
 
-@app.route('/form')
+@app.route('/')
 def form_views():
     return render_template('03-form.html')
 
 
-@app.route('/form_do')
+@app.route('/order_return')
 def form_do():
     if request.method == 'GET':
         # 获取 form 表单提交过来的数据
@@ -24,8 +23,7 @@ def form_do():
         list = [order_code]
         for order_code in list:
             sql = 'select user_id,tenant_id from t_order where order_code = "%s"' % order_code
-            database = 'cd-order_uat'
-            r = DBUtil.product(sql, database)
+            r = DBUtil.product(sql, app_tool.orderDB)
             I = DBUtil.fetch(r, 'fetchone')
             userId = int(I[0])
             tenantId = int(I[1])
@@ -34,7 +32,7 @@ def form_do():
             user = ('user:security:userId:%d:%d') % (tenantId, userId)
             token = ro.get(user)
             sql = 'select id,spec_id from t_order_detail where order_code = "%s"' % order_code
-            r = DBUtil.product(sql, database)
+            r = DBUtil.product(sql, app_tool.orderDB)
             re = DBUtil.fetch(r, 'fetchone')
             detailId = str(re[0])
             specId = str(re[1])
@@ -47,5 +45,7 @@ def form_do():
             response = requests.post(url, json.dumps(data), headers=headers)
             assert 200, response.json().get("status")
             return render_template('03-form.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
