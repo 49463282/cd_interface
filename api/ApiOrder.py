@@ -1,7 +1,7 @@
 # coding=utf-8
 import requests
 import unittest
-import app_tool
+import app
 from tools.Redis import DBRedis
 from tools.PyMysql_cd import DBUtil
 import json
@@ -10,7 +10,7 @@ import json
 class ApiOrder(unittest.TestCase):
 
     def api_orderreturn_add(self):
-        url = app_tool.BASE_URL + "/miniapp/orderreturn/add"
+        url = app.BASE_URL + "/miniapp/orderreturn/add"
         list = ["D1662020080417420299624"]
         for order_code in list:
             sql = 'select user_id,tenant_id from t_order where order_code = "%s"' % order_code

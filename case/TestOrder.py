@@ -2,7 +2,7 @@
 import json
 import unittest
 import requests
-import app_tool
+import app
 from tools.PyMysql_cd import DBUtil
 from tools.Redis import DBRedis
 
@@ -43,13 +43,13 @@ class TestOrder(unittest.TestCase):
         cursor.execute(sql)
         r = cursor.fetchone()
         specId = str(r[0])
-        url = app_tool.BASE_URL + "/miniapp/cart/temporary/add"
+        url = app.BASE_URL + "/miniapp/cart/temporary/add"
         data = {"list": [{"productId": productId, "specId": specId, "number": 1}], "v": "2.6.0"}
         response = requests.post(url, json.dumps(data), headers=self.heda)
         self.assertEqual("处理成功", response.json().get("message"))
 
     def test_receiveaddress_add(self):  # 添加收获地址
-        url = app_tool.BASE_URL + '/miniapp/receiveaddress/add'
+        url = app.BASE_URL + '/miniapp/receiveaddress/add'
         data = {"id": "", "name": "明", "phone": "18449811211", "region": ["北京市", "北京市", "东城区"], "address": "31566165",
                 "postcode": "", "isDefault": 0, "province": "北京市", "city": "北京市", "area": "东城区", "v": "2.6.0"}
         response = requests.post(url, json.dumps(data), headers=self.heda)
@@ -64,7 +64,7 @@ class TestOrder(unittest.TestCase):
         cursor.execute(sql)
         r = cursor.fetchone()
         receiverId = int(r[0])
-        url = app_tool.BASE_URL + "/miniapp/order/create"
+        url = app.BASE_URL + "/miniapp/order/create"
         data = {"couponCustomerId": "", "expressId": "", "receiverId": receiverId, "remark": "", "isTake": 0,
                 "v": "2.6.0"}
         response = requests.post(url, json.dumps(data), headers=self.heda)
