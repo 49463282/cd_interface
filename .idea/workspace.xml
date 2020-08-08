@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cd_tools/redis_cd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/redis_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_tool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/t/03-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/t/03-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/PyMysql_cd.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/PyMysql_cd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/Redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Redis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +68,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -123,7 +122,7 @@
       <recent name="C:\Users\hp\PycharmProjects\cd_interface" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run (1)">
+  <component name="RunManager" selected="Python.redis_cd">
     <configuration name="app_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,6 +137,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_tool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redis_cd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cd_tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cd_tools/redis_cd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,21 +211,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for ApiOrder.ApiOrder" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="cd_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;ApiOrder.ApiOrder&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests in ApiOrder.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -223,17 +229,17 @@
     <list>
       <item itemvalue="Python.run" />
       <item itemvalue="Python.run (1)" />
-      <item itemvalue="Python tests.Unittests for ApiOrder.ApiOrder" />
-      <item itemvalue="Python tests.Unittests in ApiOrder.py" />
       <item itemvalue="Python.app_tool" />
+      <item itemvalue="Python tests.Unittests in ApiOrder.py" />
+      <item itemvalue="Python.redis_cd" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.redis_cd" />
         <item itemvalue="Python.run (1)" />
         <item itemvalue="Python.app_tool" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python tests.Unittests in ApiOrder.py" />
-        <item itemvalue="Python tests.Unittests for ApiOrder.ApiOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -256,6 +262,7 @@
       <workItem from="1596508739861" duration="20672000" />
       <workItem from="1596549390018" duration="5653000" />
       <workItem from="1596609982097" duration="1909000" />
+      <workItem from="1596687842990" duration="9124000" />
     </task>
     <task id="LOCAL-00001" summary="加入代码">
       <created>1584789136267</created>
@@ -454,6 +461,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="842" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595483895781" />
+    <state x="693" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596789333474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596789333474" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596789399143">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596789399143" />
     <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1596542061817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -462,26 +477,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="537" y="180" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596554129247" />
-    <state width="1877" height="217" key="GridCell.Tab.0.bottom" timestamp="1596611888981">
+    <state width="1877" height="217" key="GridCell.Tab.0.bottom" timestamp="1596896039240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1454" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596555149166" />
-    <state width="1877" height="217" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596611888981" />
-    <state width="1877" height="217" key="GridCell.Tab.0.center" timestamp="1596611888981">
+    <state width="1877" height="217" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596896039240" />
+    <state width="1877" height="217" key="GridCell.Tab.0.center" timestamp="1596896039240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1454" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596555149165" />
-    <state width="1877" height="217" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596611888981" />
-    <state width="1877" height="217" key="GridCell.Tab.0.left" timestamp="1596611888981">
+    <state width="1877" height="217" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596896039240" />
+    <state width="1877" height="217" key="GridCell.Tab.0.left" timestamp="1596896039240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1454" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596555149165" />
-    <state width="1877" height="217" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596611888981" />
-    <state width="1877" height="217" key="GridCell.Tab.0.right" timestamp="1596611888981">
+    <state width="1877" height="217" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596896039240" />
+    <state width="1877" height="217" key="GridCell.Tab.0.right" timestamp="1596896039240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1454" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596555149165" />
-    <state width="1877" height="217" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596611888981" />
+    <state width="1877" height="217" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596896039240" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1596531481576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -522,6 +537,7 @@
     <SUITE FILE_PATH="coverage/cd_interface$Redis.coverage" NAME="Redis Coverage Results" MODIFIED="1593924605192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1596450600918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cd_interface$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1596610865384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$redis_cd.coverage" NAME="redis_cd Coverage Results" MODIFIED="1596896039234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_addstoreproduct.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_addstoreproduct Coverage Results" MODIFIED="1596538192762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct.coverage" NAME="Unittests for TestProduct.TestProduct Coverage Results" MODIFIED="1595484146767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$app_tool.coverage" NAME="app_tool Coverage Results" MODIFIED="1596610688037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
