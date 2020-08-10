@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script>
-    url = "order_return"
-
+    // url = "order_return"
+    $(function () {
+        $return_code = $("h3");
+        $return_code.css({"color": "red"});
+    });
 </script>
 <body>
 <form action="/order_return_type" method="get">
@@ -14,7 +18,8 @@
         <input type="text" name="return_code" id="1">
     <p>
         <button type="submit">查询</button>
-    </p>
+    <p>
+    <h3>{{return_code}}{{return_type}}</h3>
     </p>
 </form>
 </body>

@@ -4,7 +4,10 @@ import os
 # url
 BASE_URL = "http://apipre.icaodong.com"
 TOKEN = None
-
+headers = {
+    "token": TOKEN,
+    "Content-Type": "application/json;charset=UTF-8"
+}
 # 获取资源的绝对路径
 ABS_PATH = os.path.abspath(__file__)
 # 获取项目的绝对路径

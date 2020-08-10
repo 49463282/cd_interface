@@ -26,11 +26,8 @@ class ApiLogin(unittest.TestCase):
         url = app.BASE_URL + '/manager/sysuser/login'
         data = {"tenantId": 100, "mobile": "18549811212", "password": "qwe123", "code": code,
                 "uuid": "038add55-52dd-4e22-b2a7-78306d3b0074", "brandType": 1, "type": 0}
-        headers = {
-            "token": app.TOKEN,
-            "Content-Type": "application/json;charset=UTF-8"
-        }
-        response = requests.post(url, data=json.dumps(data), headers=headers)
+
+        response = requests.post(url, data=json.dumps(data), headers=app.headers)
         token = response.json().get("data").get("token")
         app.TOKEN = token
         # 返回请求结果
