@@ -29,7 +29,7 @@ def form_return_type():
             type = "为线上退款"
         elif return_type == 2:
             type = "为线下退款"
-    return render_template("order_return_type.html", return_type=type,return_code =return_code)
+    return render_template("order_return_type.html", return_type=type, return_code=return_code)
 
 
 @app_tool.route('/order_return')
@@ -67,4 +67,4 @@ def form_do():
 
 
 if __name__ == "__main__":
-    app_tool.run(debug=True, port=5000)
+    app_tool.run(host="0.0.0.0", debug=True, port=5000)
