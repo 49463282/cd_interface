@@ -8,10 +8,28 @@ import json
 app_tool = Flask(__name__, template_folder='t', static_url_path='/static', static_folder='s')
 
 
-@app_tool.route('/')
 def form_views():
     return render_template('03-form.html')
 
+
+@app_tool.route('/order_return')
+def from_views():
+    return render_template("order_return_type.html")
+
+
+@app_tool.route('/order_return_type')
+def form_return_type():
+    if request.method == "GET":
+        return_code = request.args.get("return_code")
+        sql = 'select refund_type from t_order_return where return_code = "%s" and tenant_id = 508;' % return_code
+        r = DBUtil.product(sql, app.orderDB)
+        I = DBUtil.fetch(r, 'fetchone')
+        refund_type = int(I[0])
+        if refund_type == 1:
+            print("线上退款")
+        elif refund_type == 2:
+            print("线下退款")
+    return render_template("order_return_type.html")
 
 @app_tool.route('/order_return')
 def form_do():

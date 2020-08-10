@@ -84,3 +84,54 @@ class ApiLogin(unittest.TestCase):
     #             headers = "id,method,tenantId,mobile,password,uuid,code,brandType,type,expect,real_value,assert_value".split(
     #                 ",")
     #             CSV().writeCSV(result_file, results, headers)  # 写入csv文件
+
+
+class base:
+    host_name = {
+        "pre":"",
+        "prod": "",
+    }
+    def __init__(self,token):
+        self.token = token
+    def request(self,api_name,params=None,data=None,headers=None,method="GET"):
+        method = method.upper()
+        url = f"{self.host_name}{api_name}"
+        # token = ""
+        params = {
+
+        }
+        if "token" not in headers:
+            headers["token"] = self.token
+
+        response = requests.request(method,params=params,json=data,headers=headers)
+        if response.status_code == 200:
+            return self.response_data(response.json())
+        else:
+            raise ValueError("status code wrong.")
+
+    def response_data(self,data):
+        # data["timestamp"] = time.mkt
+        return data
+
+class product(base):
+    def __init__(self,token):
+        super.__init__(token)
+
+    def create(self,data):
+        api_name = "/manger/product/add"
+        resposne = self.request(api_name,data=data,method="post")
+        return resposne
+
+    def create_demo(self):
+        data = {
+            "id":0,
+            "product_name":"",
+        }
+        return self.create(data)
+
+    def update(self,_id,data):
+
+
+
+
+p = product()
