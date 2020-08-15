@@ -31,3 +31,17 @@ class CSV:
                 for result in results:
                     writer.writerow(result)
             csvfile.close()
+
+
+
+'''
+from pandas import df
+rows = execSql(sql, innisfree_prod, cursor_type="dict")
+    print(type(rows))
+    df = pd.DataFrame(rows)
+    filename = f"悦诗风吟_订单导出_{start_date}_{end_date}.xlsx"
+    file_path = os.path.join(BASE_PATH, "file", filename)
+    print(file_path)
+    df.to_excel(file_path, index=False, engine='xlsxwriter') 
+   
+'''

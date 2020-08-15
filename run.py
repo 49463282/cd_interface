@@ -44,6 +44,7 @@ def form_do():
             sql = 'select user_id,tenant_id from t_order where order_code = "%s"' % order_code
             r = DBUtil.product(sql, app.orderDB)
             I = DBUtil.fetch(r, 'fetchone')
+
             userId = int(I[0])
             tenantId = int(I[1])
             # 查询用户token
