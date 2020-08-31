@@ -1,9 +1,25 @@
 # coding=utf-8
 import os
 
-# url
-BASE_URL = "http://apipre.icaodong.com"
 TOKEN = None
+# url
+# BASE_URL = "http://apipre.icaodong.com"
+BASE_URL = "http://apiuat.icaodong.com"
+# BASE_URL = "http://182.254.167.77"
+BASE_OPEN_URL = "http://apipre.icaodong.com"
+
+
+# BASE_OPEN_URL = "http://ir.zlf.cn"
+
+def base_url(base):
+    base_url = {
+        "pre": "http://apipre.icaodong.com",
+        "uat": "http://apiuat.icaodong.com",
+        "open": "http://apipre.icaodong.com"
+    }
+    return base_url[base]
+
+
 headers = {
     "token": TOKEN,
     "Content-Type": "application/json;charset=UTF-8"

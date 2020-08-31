@@ -4,12 +4,20 @@ import app
 from tools.Redis import DBRedis
 from tools.PyMysql_cd import DBUtil
 import json
+from tools.Pandas import Excel
 
 app_tool = Flask(__name__, template_folder='t', static_url_path='/static', static_folder='s')
 
 
+@app_tool.route('/')
 def form_views():
     return render_template('03-form.html')
+
+
+@app_tool.route('/')
+def form_file():
+    file = request.args.get("file")
+    print(type(file))
 
 
 @app_tool.route('/order_return')
@@ -22,7 +30,7 @@ def form_return_type():
     if request.method == "GET":
         return_code = request.args.get("return_code")
         sql = 'select refund_type from t_order_return where return_code = "%s";' % return_code
-        r = DBUtil.product(sql, app.orderDB)
+        r = DBUtil.cursor(sql, app.orderDB)
         I = DBUtil.fetch(r, 'fetchone')
         return_type = int(I[0])
         if return_type == 1:
@@ -42,7 +50,7 @@ def form_do():
         list = [order_code]
         for order_code in list:
             sql = 'select user_id,tenant_id from t_order where order_code = "%s"' % order_code
-            r = DBUtil.product(sql, app.orderDB)
+            r = DBUtil.cursor(sql, app.orderDB)
             I = DBUtil.fetch(r, 'fetchone')
 
             userId = int(I[0])
@@ -52,7 +60,7 @@ def form_do():
             user = ('user:security:userId:%d:%d') % (tenantId, userId)
             token = ro.get(user)
             sql = 'select id,spec_id from t_order_detail where order_code = "%s"' % order_code
-            r = DBUtil.product(sql, app.orderDB)
+            r = DBUtil.cursor(sql, app.orderDB)
             re = DBUtil.fetch(r, 'fetchone')
             detailId = str(re[0])
             specId = str(re[1])
@@ -65,6 +73,17 @@ def form_do():
             response = requests.post(url, json.dumps(data), headers=headers)
             assert 200, response.json().get("status")
             return render_template('03-form.html')
+
+
+@app_tool.route('/file')
+def file():
+    uploadedFile = request.files.get("file")
+    print(uploadedFile)
+    # excel = Excel()
+    # df = excel.excel_reade(uploadedFile)
+    # data = [row for row in zip(df["store_name"], df["account_id"])]
+    # for store_name, account_id in data:
+    #     print(store_name, account_id)
 
 
 if __name__ == "__main__":

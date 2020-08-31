@@ -10,9 +10,11 @@ import json
 import csv
 import os
 from api.ApiLogin import ApiLogin
+from tools.Logging import Log
 
 
 class TestLogin(unittest.TestCase):
+    log = Log()
 
     def setUp(self):
         # 初始化登录类
@@ -20,11 +22,15 @@ class TestLogin(unittest.TestCase):
 
     def test_token(self):
         # 调用请求业务
+        self.log.info("---------start!----------")
         response = self.ApiLogin.api_login()
+        self.log.info(u"调用登录请求结果：%s" % response.text)
+        self.log.info(u"获取登录是否成功：%s" % response.json()["message"])
         token = response.json().get("data").get("token")
         app.TOKEN = token
         # 断言判断
         self.assertEqual(200, response.json().get("status"))
+        self.log.info("----------end------------")
 
     def readCSV(self, filename):
         '''

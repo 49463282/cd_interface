@@ -20,12 +20,113 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="937c7a89-5f67-4092-a520-b79df17f8d0a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/ApiOpen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cd_tools/cookies.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cd_tools/txkt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cd_tools/zlf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/Logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/Pandas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cd_tools/redis_cd.py" beforeDir="false" afterPath="$PROJECT_DIR$/cd_tools/redis_cd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApiLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiLogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApiOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApiUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApiUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/TestLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestLogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/TestProduct.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/TestProduct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cd_tools/redis_cd.py" beforeDir="false" afterPath="$PROJECT_DIR$/cd_tools/_token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0322_48_31_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0322_51_06_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0322_52_39_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0322_55_53_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0322_56_31_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_12_54_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_14_14_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_15_06_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_15_48_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_16_32_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_16_42_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_17_34_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_17_55_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_18_04_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_18_30_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_18_41_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_21_06_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_21_36_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_21_49_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_22_11_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_22_24_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_22_38_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_23_44_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_27_08_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_27_41_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_32_00_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_34_14_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_34_31_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_39_30_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_40_26_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_47_05_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_50_44_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_55_13_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_55_45_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_56_41_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_57_15_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_57_31_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_57_43_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_57_55_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0323_59_41_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_00_02_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_07_53_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_08_23_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_09_26_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_11_04_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_11_39_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_12_08_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0400_12_20_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0414_42_29_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0414_43_47_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0415_10_53_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2020-08-0415_44_01_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596466112.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596466266.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596466359.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596466554.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596466592.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596467749.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596467803.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596467855.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596467876.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596467885.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596467910.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596468131.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596468429.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596468462.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596468721.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596468871.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596469170.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596469226.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596469626.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596469845.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470113.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470146.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470201.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470236.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470251.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470264.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470275.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470382.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470403.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470874.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470903.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596470966.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596471064.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596471100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596471129.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/login_1596471141.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/CSV.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/CSV.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/HTMLTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/HTMLTestRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/Request.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t/03-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/t/03-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t/order_return_type.html" beforeDir="false" afterPath="$PROJECT_DIR$/t/order_return_type.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/PyMysql_cd.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/PyMysql_cd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +205,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../测试资料/2019python赠品/Python 笔记源码/16- flask/Day03/FlaskDemo3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -117,14 +218,15 @@
       <recent name="C:\Users\hp\PycharmProjects\cd_interface\tools" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\cd_interface\data" />
       <recent name="D:\demo\cd_interface\t" />
       <recent name="C:\Users\hp\PycharmProjects\cd_interface\data" />
       <recent name="C:\Users\hp\PycharmProjects\cd_interface\tools" />
       <recent name="C:\Users\hp\PycharmProjects\cd_interface" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.redis_cd">
-    <configuration name="app_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.run_suite">
+    <configuration name="ApiOpen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,12 +234,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_tool.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/ApiOpen.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,7 +248,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="redis_cd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Logging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cd_interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/Logging.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="_token (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,7 +283,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cd_tools/redis_cd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cd_tools/_token.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,7 +292,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,7 +305,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,7 +314,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="run_suite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cd_interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -198,34 +322,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Flask_demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\demo\cd_interface\run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="txkt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cd_interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cd_tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cd_tools/txkt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_suite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,19 +337,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.run" />
-      <item itemvalue="Python.run (1)" />
-      <item itemvalue="Python.app_tool" />
-      <item itemvalue="Python.redis_cd" />
-      <item itemvalue="Python.txkt" />
+      <item itemvalue="Python._token (1)" />
+      <item itemvalue="Python.ApiOpen" />
+      <item itemvalue="Python.run_suite" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.Logging" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.redis_cd" />
-        <item itemvalue="Python.txkt" />
-        <item itemvalue="Python.run (1)" />
-        <item itemvalue="Python.app_tool" />
-        <item itemvalue="Python.run" />
+        <item itemvalue="Python.run_suite" />
+        <item itemvalue="Python.Logging" />
+        <item itemvalue="Python.ApiOpen" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python._token (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +376,10 @@
       <workItem from="1597068541913" duration="3186000" />
       <workItem from="1597113644136" duration="5431000" />
       <workItem from="1597393424086" duration="3518000" />
-      <workItem from="1597486384735" duration="2328000" />
+      <workItem from="1597486384735" duration="37798000" />
+      <workItem from="1598005787208" duration="27646000" />
+      <workItem from="1598582439997" duration="5264000" />
+      <workItem from="1598856152945" duration="7714000" />
     </task>
     <task id="LOCAL-00001" summary="加入代码">
       <created>1584789136267</created>
@@ -451,17 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1597073287656</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="腾讯课堂签单脚本">
+      <created>1597504793134</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1597504793134</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
-  </component>
-  <component name="TodoView" selected-index="4">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
@@ -482,9 +585,14 @@
     <MESSAGE value="添加申请退款" />
     <MESSAGE value="11" />
     <MESSAGE value="退款类型查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="退款类型查询" />
+    <MESSAGE value="腾讯课堂签单脚本" />
+    <option name="LAST_COMMIT_MESSAGE" value="腾讯课堂签单脚本" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="644" y="289" key="#Log_Highlighting_(ideolog)" timestamp="1598864035947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="644" y="289" key="#Log_Highlighting_(ideolog)/0.0.1920.1040@0.0.1920.1040" timestamp="1598864035947" />
     <state x="842" y="382" key="#Notifications" timestamp="1595483895781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -493,59 +601,59 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596789333474" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597395947648">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597978373942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597395947648" />
-    <state x="446" y="0" key="CommitChangelistDialog2" timestamp="1597073286083">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597978373942" />
+    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1597504791205">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="446" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597073286083" />
-    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596896651797" />
+    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597504791205" />
     <state x="537" y="180" key="FileChooserDialogImpl" timestamp="1596554129247">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="537" y="180" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596554129247" />
-    <state width="1877" height="217" key="GridCell.Tab.0.bottom" timestamp="1597487059348">
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom" timestamp="1598867391594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597073122331" />
-    <state width="1877" height="217" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597487059348" />
-    <state width="1877" height="217" key="GridCell.Tab.0.center" timestamp="1597487059348">
+    <state width="1877" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598867391594" />
+    <state width="1877" height="322" key="GridCell.Tab.0.center" timestamp="1598867391594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597073122330" />
-    <state width="1877" height="217" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597487059348" />
-    <state width="1877" height="217" key="GridCell.Tab.0.left" timestamp="1597487059348">
+    <state width="1877" height="322" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598867391594" />
+    <state width="1877" height="322" key="GridCell.Tab.0.left" timestamp="1598867391594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597073122330" />
-    <state width="1877" height="217" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597487059348" />
-    <state width="1877" height="217" key="GridCell.Tab.0.right" timestamp="1597487059348">
+    <state width="1877" height="322" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598867391594" />
+    <state width="1877" height="322" key="GridCell.Tab.0.right" timestamp="1598867391594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597073122330" />
-    <state width="1877" height="217" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597487059348" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1596531481576">
+    <state width="1877" height="322" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598867391594" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1598862347864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596531481576" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1596531481576">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598862347864" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1598862347864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596531481576" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1596531481576">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598862347864" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1598862347864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596531481576" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1596531481576">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598862347864" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1598862347864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596531481576" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1593944318407">
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598862347864" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1597894020378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593944318407" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597894020378" />
     <state x="573" y="127" width="782" height="717" key="find.popup" timestamp="1596531423448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -556,20 +664,27 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595490593158" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1596538547932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cd_interface$run.coverage" NAME="run Coverage Results" MODIFIED="1596553604623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Flask_demo" />
+    <SUITE FILE_PATH="coverage/cd_interface$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1598867391586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$zhouliufu.coverage" NAME="zhouliufu Coverage Results" MODIFIED="1598005501793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
+    <SUITE FILE_PATH="coverage/cd_interface$zlf.coverage" NAME="zlf Coverage Results" MODIFIED="1598341627004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
+    <SUITE FILE_PATH="coverage/cd_interface$token__1_.coverage" NAME="token (1) Coverage Results" MODIFIED="1598344607141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
     <SUITE FILE_PATH="coverage/cd_interface$Lw_test.coverage" NAME="Lw_test Coverage Results" MODIFIED="1595484378762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cy_zy" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_ApiProuuct_TestProduct_test_product_add.coverage" NAME="Unittests for ApiProuuct.TestProduct.test_product_add Coverage Results" MODIFIED="1596524567259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/cd_interface$run.coverage" NAME="run Coverage Results" MODIFIED="1598435849359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_ApiOrder_ApiOrder.coverage" NAME="Unittests for ApiOrder.ApiOrder Coverage Results" MODIFIED="1596541698078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_list.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_list Coverage Results" MODIFIED="1596528437562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
-    <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestLogin_TestLogin_test_token.coverage" NAME="Unittests for TestLogin.TestLogin.test_token Coverage Results" MODIFIED="1596523763115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestLogin_TestLogin_test_token.coverage" NAME="Unittests for TestLogin.TestLogin.test_token Coverage Results" MODIFIED="1597978225011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$Redis.coverage" NAME="Redis Coverage Results" MODIFIED="1593924605192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1596450600918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cd_interface$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1597285262181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cd_interface$redis_cd.coverage" NAME="redis_cd Coverage Results" MODIFIED="1597487059338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
+    <SUITE FILE_PATH="coverage/cd_interface$app.coverage" NAME="app Coverage Results" MODIFIED="1598861174586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$_token__1_.coverage" NAME="_token (1) Coverage Results" MODIFIED="1598856172497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
+    <SUITE FILE_PATH="coverage/cd_interface$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1597820476084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$redis_cd.coverage" NAME="redis_cd Coverage Results" MODIFIED="1597992048366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_addstoreproduct.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_addstoreproduct Coverage Results" MODIFIED="1596538192762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct.coverage" NAME="Unittests for TestProduct.TestProduct Coverage Results" MODIFIED="1595484146767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
+    <SUITE FILE_PATH="coverage/cd_interface$Pandas.coverage" NAME="Pandas Coverage Results" MODIFIED="1598256122695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/cd_interface$app_tool.coverage" NAME="app_tool Coverage Results" MODIFIED="1596610688037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cd_interface$Logging.coverage" NAME="Logging Coverage Results" MODIFIED="1598867385669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/cd_interface$ApiOpen.coverage" NAME="ApiOpen Coverage Results" MODIFIED="1598861886672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_in_ApiOrder_py.coverage" NAME="Unittests in ApiOrder.py Coverage Results" MODIFIED="1596550893621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/cd_interface$Unittests_for_TestProduct_TestProduct_test_product_add.coverage" NAME="Unittests for TestProduct.TestProduct.test_product_add Coverage Results" MODIFIED="1596528428635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case" />
     <SUITE FILE_PATH="coverage/cd_interface$txkt.coverage" NAME="txkt Coverage Results" MODIFIED="1597396367839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cd_tools" />

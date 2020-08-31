@@ -17,3 +17,4 @@ class ApiUser(unittest.TestCase):
         data = {"isFilter": 0}
         response = requests.post(url, json.dumps(data), headers=headers)
         return response
+

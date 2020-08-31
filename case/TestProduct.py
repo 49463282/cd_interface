@@ -41,9 +41,9 @@ class TestProduct(unittest.TestCase):
         r = self.ApiUser.api_store_get_sysuser_store_tree(self.headers)
         companyId = str(r.json().get("data")[0].get("id"))
         response = self.ApiProduct.api_product_addstoreproduct(prodcutId, companyId, self.headers)
-        r1 = self.ApiProduct.api_storeproduct_list(companyId, self.headers)
+        re = self.ApiProduct.api_storeproduct_list(companyId, self.headers)
         self.assertEqual(200, response.json().get("status"))
-        self.assertEqual(r1.json().get("data").get("dataList")[0].get("name"), 'product_name')
+        self.assertEqual(re.json().get("data").get("dataList")[0].get("name"), 'product_name')
 
     def test_storeproduct_delete(self):
         response = self.ApiProduct.api_storeproduct_delete(prodcutId, self.headers)

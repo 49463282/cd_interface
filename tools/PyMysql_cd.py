@@ -2,6 +2,7 @@
 import pymysql
 import app
 
+
 class DBUtil:
     @classmethod
     def get_connect(cls, database):
@@ -15,13 +16,14 @@ class DBUtil:
                                    database=database, port=23305,
                                    charset='utf8')
         else:
-            return "配置文件填写的请求地址不正确"
+            return "配置文件app.py填写的请求地址不正确"
+
     @classmethod
     def get_cursor(cls, conn):
         return conn.cursor()
 
     @classmethod
-    def product(cls, sql, database):
+    def cursor(cls, sql, database):
         conn = DBUtil.get_connect(database)
         cursor = conn.cursor()
         cursor.execute(sql)
@@ -43,7 +45,7 @@ class DBUtil:
             return '正确填写获取的数量'
 
     @classmethod
-    def close_res(cls, cursor, conn):
+    def close_res(cls, cursor=None, conn=None):
         if cursor:
             cursor.close
             cursor = None
